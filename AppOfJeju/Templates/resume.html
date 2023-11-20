@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="static/main_static/assets/dol_removebg.png" />
+        <title>제주 특산물</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="static/detail_static/css/styles.css" rel="stylesheet" />
+        <link href="static/detail_static/css/calender.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/cfeddde540.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+
+    <!--여기서부터 navbar인데 어찌해야할지 모르겠네 -->
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="{% url 'main' %}">
+                        <img class="profile-img" src="static/main_static/assets/jeju_logo.png"  href="{% url 'main' %}"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item"><a class="nav-link" href="{% url 'main' %}">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'jeju' %}">Detail</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'process' %}">Process</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'resume' %}">Resume</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars">Zoom</i></button>
+                </div>
+            </nav>
+        </main>
+
+        {% include "sidenavbar.html" %}
+        <div id="layoutSidenav_content">
+      <main>
+          <div class="container">
+                  <div class="row row-cols-2 row-cols-lg-5">
+                          <div class="col-xl-3 col-md-5">
+                              <div class="card bg-primary text-white mb-4">
+                                  <div class="card-body">강나영 | Kang Na Young</div>
+                                  <div class="card-footer d-flex align-items-center justify-content-between">
+                                      <a class="small text-white stretched-link" href="#kny">View Details</a>
+                                      <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-3 col-md-5">
+                              <div class="card bg-warning text-white mb-4">
+                                  <div class="card-body">안병선 | An Byeong Seon</div>
+                                  <div class="card-footer d-flex align-items-center justify-content-between">
+                                      <a class="small text-white stretched-link" href="#abs">View Details</a>
+                                      <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-3 col-md-5">
+                              <div class="card bg-success text-white mb-4">
+                                  <div class="card-body">유정민 | Yoo Jeong Min</div>
+                                  <div class="card-footer d-flex align-items-center justify-content-between">
+                                      <a class="small text-white stretched-link" href="#yjm">View Details</a>
+                                      <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-3 col-md-5">
+                              <div class="card bg-danger text-white mb-4">
+                                  <div class="card-body">오영환 | Oh Young Hwan</div>
+                                  <div class="card-footer d-flex align-items-center justify-content-between">
+                                      <a class="small text-white stretched-link" href="#oyh">View Details</a>
+                                      <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                </main>
+
+           <!-- 나영님 파트 -->
+            <Center><h1>Resume</h1></Center>
+                <section class="py-5" id="kny">
+                <div class="container px-4 px-lg-5 my-5">
+                    <div class="row gx-4 gx-lg-5 align-items-center">
+                        <div class="col-md-3"><img class="card-img-top" src="https://i.namu.wiki/i/acURuIb-T9GM5UMZCCxfldzCa46INi7aF-qJxkA2ju78yt220ZiopnR7RivoX_tw1TCdzz05IzuWxgAQ1ZBOZg.webp" alt="..." /></div>
+                            <div class="col-md-6">
+                                <div class="small mb-1">Front-end</div>
+                                <h1 class="display-5 fw-bolder">이청용 | Lee Chung Yong</h1>
+                                <div class="fs-5 mb-5">
+                                    <span>@cylee27_</span>
+                                </div>
+                                <p class="lead">
+                                   ▶️ K리그1 MVP: 2022 <br>
+                                    ✔️ K리그1 베스트 XI: 2008, 2022 <br>
+                                    ✔️ KFA 팬 선정 올해의 선수: 2013 <br>
+                                    ✔️ 프리미어 리그 북서부 올해의 선수#: 2009-10 <br>
+                                    ✔️ 프리미어 리그 마일스톤 어워즈: 2017-18[11] <br>
+                                    ✔️ 리그컵 도움왕: 2007 <br>
+                                    ✔️ 볼턴 원더러스 올해의 선수: 2009-10 <br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 병선님 파트 -->
+                <section class="py-5" id="abs">
+                <div class="container px-4 px-lg-5 my-5">
+                    <div class="row gx-4 gx-lg-5 align-items-center">
+                        <div class="col-md-3"><img class="card-img-top" src="https://cdn.imweb.me/upload/S2023012481de73d88229e/f99ded13cfe48.jpg" alt="..." /></div>
+                            <div class="col-md-6">
+                                <div class="small mb-1">Front-end</div>
+                                <h1 class="display-5 fw-bolder">Kim yuna</h1>
+                                <div class="fs-5 mb-5">
+                                    <span>@byeongsunny_</span>
+                                </div>
+                                <p class="lead">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- 정민님 파트 -->
+                <section class="py-5" id="yjm">
+                <div class="container px-4 px-lg-5 my-5">
+                    <div class="row gx-4 gx-lg-5 align-items-center">
+                        <div class="col-md-3"><img class="card-img-top" src="https://isplus.com/data/isp/image/2022/04/01/isphtm_20220401114151447138.jpg" alt="..." /></div>
+                            <div class="col-md-6">
+                                <div class="small mb-1">Front-end</div>
+                                <h1 class="display-5 fw-bolder">Lee MinSeong</h1>
+                                <div class="fs-5 mb-5">
+                                    <span>@byeongsunny_</span>
+                                </div>
+                                <p class="lead">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 영환님 파트 -->
+                <section class="py-5" id="oyh">
+                <div class="container px-4 px-lg-5 my-5">
+                    <div class="row gx-4 gx-lg-5 align-items-center">
+                        <div class="col-md-3"><img class="card-img-top" src="https://i.pinimg.com/736x/67/d0/9d/67d09d410ae66d50565428d84f923873.jpg" alt="..." /></div>
+                            <div class="col-md-6">
+                                <div class="small mb-1">Front-end</div>
+                                <h1 class="display-5 fw-bolder">Kim yuna</h1>
+                                <div class="fs-5 mb-5">
+                                    <span>@byeongsunny_</span>
+                                </div>
+                                <p class="lead">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+        {% include "footer.html" %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="static/detail_static/js/scripts.js"></script>
+        <script src="static/detail_static/js/calender.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="static/detail_static/assets/demo/chart-area-demo.js"></script>
+        <script src="static/detail_static/assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="static/detail_static/js/datatables-simple-demo.js"></script>
+    </body>
+</html>
