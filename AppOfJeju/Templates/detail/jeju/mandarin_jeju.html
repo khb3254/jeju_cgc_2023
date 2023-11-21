@@ -57,7 +57,7 @@
                     <div class="card bg-warning text-white mb-4">
                         <div class="card-body">감귤</div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="{% url 'jmandarin' %} ">View Details</a>
+                            <a class="small text-white stretched-link" href="{% url 'jmandarin' %}">View Details</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                     <div class="card bg-success text-white mb-4">
                         <div class="card-body">브로콜리</div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="{% url 'jbroccoli' %}">View Details</a>
+                            <a class="small text-white stretched-link" href="{% url 'broccoli' %}">View Details</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
@@ -94,17 +94,18 @@
             <div class="row">
                 <div class="col-xl-6">
                     <div class="card mb-6">
-                        <img class="profile-img" src="https://src.hidoc.co.kr/image/lib/2021/9/3/1630652987056_0.jpg" width="640" height="430">
+                        <img class="profile-img" src="https://cdn.wadiz.kr/wwwwadiz/green001/2021/1216/20211216120129201_136643.jpg/wadiz/resize/1200/format/jpg/quality/80/"
+                             width="640" height="430">
                     </div>
                 </div>
                 <div class="col-xl-6">
                     <div class="card mb-4">
                         <div class="card-header">
                             <i class="fas fa-chart-area me-1"></i>
-                                제주시 당근 가격변동
+                            제주시 감귤 가격변동
                         </div>
                         <div class="card-body">
-                            <canvas id="CarrotJejuChart" width="100%" height="60"></canvas>
+                            <canvas id="MandarinJejuChart" width="100%" height="60"></canvas>
                         </div>
                     </div>
                 </div>
@@ -116,7 +117,7 @@
     <div class="container text-center">
         <div class="row align-items-start">
             <div class="col">
-                <h2> 제주시 추천 온라인 당근마켓 </h2>
+                <h2> 제주시 추천 온라인 감귤스토어 </h2>
             </div>
         </div>
     </div>
@@ -129,84 +130,92 @@
                 <div class="col-lg-6 col-xxl-4 mb-5">
                     <div class="card bg-light border-0 h-100">
                         <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <a href="https://smartstore.naver.com/gujwacarrot/category/50000006?cp=1" target="_blank">
+                            <a href="https://smartstore.naver.com/aewolsamchun/products/5238574745?n_media=11068&n_query=%EC%A0%9C%EC%A3%BC%EA%B0%90%EA%B7%A4&n_rank=1&n_ad_group=grp-a001-02-000000038268926&n_ad=nad-a001-02-000000270497799&n_campaign_type=2&n_mall_id=ncp_1o2jjo_01&n_mall_pid=5238574745&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlp7qm7n4%7Cci%3D0BEc002Y6zLzftom5uXn%7Ctr%3Dpla%7Chk%3Dd87da1d2085fc5f84f5238357624824fa099a7d2" target="_blank">
                                 <div class="mb-4 mt-n4">
-                                        <img class="profile-img" src="static/special_static/assets/jeju/carrot/구좌당근.jpg" width="250"
-                                             height="120">
+                                    <img class="profile-img" src="static/special_static/assets/jeju/mandarin/애월삼촌.jpg" width="250"
+                                         height="120">
                                 </div>
                             </a>
-                            <h2 class="fs-4 fw-bold">구좌당근</h2>
-                            <p>제주구좌읍에 위치한 3만여평의 <br> 밭에서 직접 농사지어 배송해드립니다</p>
+                            <h2 class="fs-4 fw-bold">애월삼촌</h2>
+                            <p>제주 애월 농업경영인 직거래농산물 ★100% 산지직송★</p>
                         </div>
                     </div>
                 </div>
-                 <div class="col-lg-6 col-xxl-4 mb-5">
+
+                <div class="col-lg-6 col-xxl-4 mb-5">
                     <div class="card bg-light border-0 h-100">
                         <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <a href="https://smartstore.naver.com/tti2019/products/7802104163?n_media=11068&n_query=%EC%A0%9C%EC%A3%BC%EB%8B%B9%EA%B7%BC&n_rank=2&n_ad_group=grp-a001-02-000000038713958&n_ad=nad-a001-02-000000273683914&n_campaign_type=2&n_mall_id=ncp_1nq683_01&n_mall_pid=7802104163&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlp6kooa0%7Cci%3D0DEc002v1PHzB3N0%2DuZ%5F%7Ctr%3Dpla%7Chk%3Dc0b8fae36935228d62371dc9363f119a11478850" target="_blank">
+                            <a href="https://smartstore.naver.com/gyuldamwon/products/6474882238?n_media=11068&n_query=%EC%A0%9C%EC%A3%BC%EA%B0%90%EA%B7%A4&n_rank=2&n_ad_group=grp-a001-02-000000026426770&n_ad=nad-a001-02-000000176798378&n_campaign_type=2&n_mall_id=ncp_1nosn8_01&n_mall_pid=6474882238&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlp7qp6w8%7Cci%3D0A4000196PLz0NvCsKWJ%7Ctr%3Dpla%7Chk%3Db389c50f4ef2620e8cad54ba3f5c17e4ddc1172e"
+                               target="_blank">
                                 <div class="mb-4 mt-n4">
-                                        <img class="profile-img" src="static/special_static/assets/jeju/carrot/띠앗농장.jpg" width="250"
-                                             height="120">
+                                    <img class="profile-img" src="static/special_static/assets/jeju/mandarin/천하일품.jpg" width="250"
+                                         height="120">
                                 </div>
                             </a>
-                            <h2 class="fs-4 fw-bold">띠앗농장</h2>
-                            <p>제주에서 농사짓고 직접 판매하고 있습니다.</p>
+                            <h2 class="fs-4 fw-bold">천하일품</h2>
+                            <p>청정 제주 농산물을 더 정직하고 <br>신선하고/꼼꼼하게 보내드리는 <br>믿고 먹는 천하일품농장입니다.</p>
                         </div>
                     </div>
                 </div>
-                 <div class="col-lg-6 col-xxl-4 mb-5">
+
+                <div class="col-lg-6 col-xxl-4 mb-5">
                     <div class="card bg-light border-0 h-100">
                         <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <a href="https://smartstore.naver.com/superior1/products/6173649748?NaPm=ct%3Dlp6l2v2w%7Cci%3D360f76dc7f8b698782dd2c00595f5ec5eec9beac%7Ctr%3Dslsl%7Csn%3D2533549%7Chk%3Dee50e27cc26205672338d5b32a51e7575bcff6ca" target="_blank">
+                            <a href="https://smartstore.naver.com/akkome/products/6400134206?n_media=11068&n_query=%EC%A0%9C%EC%A3%BC%EA%B0%90%EA%B7%A4&n_rank=3&n_ad_group=grp-a001-02-000000038465287&n_ad=nad-a001-02-000000271944983&n_campaign_type=2&n_mall_id=ncp_1ntss2_01&n_mall_pid=6400134206&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlp7qs328%7Cci%3D0za0003e6PLzQWc19L0b%7Ctr%3Dpla%7Chk%3Dbaff7696227847af463fe82eeba5611684285e85"
+                               target="_blank">
                                 <div class="mb-4 mt-n4">
-                                        <img class="profile-img" src="static/special_static/assets/jeju/carrot/우월한 밥상.jpg" width="250"
-                                             height="120">
+                                    <img class="profile-img" src="static/special_static/assets/jeju/mandarin/제주아꼼이네.jpg" width="250"
+                                         height="120">
                                 </div>
                             </a>
-                            <h2 class="fs-4 fw-bold">우월한밥상</h2>
-                            <p>산지의 신선함을 그대로 <br>우리집 식탁까지 전달해 드립니다.</p>
+                            <h2 class="fs-4 fw-bold">제주아꼼이네</h2>
+                            <p>제주의 싱싱한 농산물을 즐기는 공간</p>
                         </div>
                     </div>
                 </div>
-                 <div class="col-lg-6 col-xxl-4 mb-5">
+
+                <div class="col-lg-6 col-xxl-4 mb-5">
                     <div class="card bg-light border-0 h-100">
                         <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <a href="https://smartstore.naver.com/daldaguni/products/6073892070?NaPm=ct%3Dlp6l8lvc%7Cci%3D2d688d9758ee6f008ece48ace0c344227aebd52d%7Ctr%3Dslsl%7Csn%3D1038068%7Chk%3D6467ef304c7c69df42127ed698236f74e1c242d9" target="_blank">
+                            <a href="https://smartstore.naver.com/samdamall/products/7258337913?n_keyword=&n_rank=4&n_query=%EC%A0%9C%EC%A3%BC%EA%B0%90%EA%B7%A4&n_campaign_type=2&n_media=11068&n_campaign=cmp-a001-02-000000002453541&n_ad_group=grp-a001-02-000000013231809&n_ad=nad-a001-02-000000203532849&n_match=3&n_network=search&n_mall_id=ncp_1np7cm_01&n_mall_pid=7258337913&n_ad_group_type=2&n_keyword_id=&n_ad_extension=&NaPm=ct%3Dlp7qvxy8%7Cci%3D0Egc002475LzM37mR0XV%7Ctr%3Dpla%7Chk%3D659dd9749fa933f790e7abfa66dfc7e6a0a01800"
+                               target="_blank">
                                 <div class="mb-4 mt-n4">
-                                        <img class="profile-img" src="static/special_static/assets/jeju/carrot/달다구니.jpg" width="250"
-                                             height="120">
+                                    <img class="profile-img" src="static/special_static/assets/jeju/mandarin/삼다몰.jpg" width="250"
+                                         height="120">
                                 </div>
                             </a>
-                            <h2 class="fs-4 fw-bold">달다구니</h2>
-                            <p>신선하고 맛있는 <br> 제철 과일 달다구니 입니다.</p>
-                        </div>
-                    </div>
-                </div>
-                 <div class="col-lg-6 col-xxl-4 mb-5">
-                    <div class="card bg-light border-0 h-100">
-                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <a href="https://smartstore.naver.com/goodvip/products/6114013445?NaPm=ct%3Dlp6lnmrk%7Cci%3D91690fbb7896847254e851c7f3be1e5395ba468c%7Ctr%3Dslsl%7Csn%3D1730066%7Chk%3D10e410d29849b6c0d4ed3a148c41f4ecf6a154f4" target="_blank">
-                                <div class="mb-4 mt-n4">
-                                        <img class="profile-img" src="static/special_static/assets/jeju/carrot/참좋은제주몰.jpg" width="250"
-                                             height="120">
-                                </div>
-                            </a>
-                            <h2 class="fs-4 fw-bold">참좋은 제주몰</h2>
-                            <p>고객상담 010-6503-0153</p>
+                            <h2 class="fs-4 fw-bold">삼다몰</h2>
+                            <p>제주 특산물 쇼핑몰, 감귤, 한라봉, <br>옥돔, 은갈치, 고등어 등 판매</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-xxl-4 mb-5">
                     <div class="card bg-light border-0 h-100">
                         <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <a href="https://smartstore.naver.com/kirinfresh/products/9465310732?NaPm=ct%3Dlp6lq3i0%7Cci%3Db4eb5bfadc155ce469ad907f4de158c0dbdf75ff%7Ctr%3Dslsl%7Csn%3D1069511%7Chk%3D8b66f0f1a228f27f4fdccbaebac75fe755490390" target="_blank">
+                            <a href="https://smartstore.naver.com/inhane?NaPm=ct%3Dlp7qybst%7Cci%3Dshopn%7Ctr%3Dslsl%7Chk%3De5334f4eddb91b495f68b649f8e2fe69f3f6c934%7Ctrx%3Dundefined"
+                               target="_blank">
                                 <div class="mb-4 mt-n4">
-                                        <img class="profile-img" src="static/special_static/assets/jeju/carrot/기린농산.jpg" width="250"
-                                             height="120">
+                                    <img class="profile-img" src="static/special_static/assets/jeju/mandarin/인하네.jpg" width="250"
+                                         height="120">
                                 </div>
                             </a>
-                            <h2 class="fs-4 fw-bold">기린농산</h2>
-                            <p>환영합니다 <br>최저가격 농산물 판매 기린농산입니다</p>
+                            <h2 class="fs-4 fw-bold">인하네</h2>
+                            <p>전국 1등급 농수산물 판매 인하네<br>감귤,한라봉,레드향,초당옥수수 등</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <a href="https://smartstore.naver.com/sodamjj?NaPm=ct%3Dlp7r0lx0%7Cci%3Dshopn%7Ctr%3Dslsl%7Chk%3D013c376e36d64605d6010cf1b8bef1a677823dc2%7Ctrx%3Dundefined"
+                               target="_blank">
+                                <div class="mb-4 mt-n4">
+                                    <img class="profile-img" src="static/special_static/assets/jeju/mandarin/소담제주.jpg" width="250"
+                                         height="120">
+                                </div>
+                            </a>
+                            <h2 class="fs-4 fw-bold">소담제주</h2>
+                            <p>생김새가 탐스러운 제주 과일 입니다</p>
                         </div>
                     </div>
                 </div>
@@ -220,9 +229,7 @@
     <script src="static/detail_static/js/scripts.js"></script>
     <script src="static/detail_static/js/calender.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="static/detail_static/assets/demo/chart-area-demo.js"></script>
-    <script src="static/special_static/js/jeju_chart/carrot_chart.js"></script>
-    <script src="static/detail_static/assets/demo/chart-bar-demo.js"></script>
+    <script src="static/special_static/js/jeju_chart/mandarin_chart.js"></script>
     <script src="static/special_static/js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
             crossorigin="anonymous"></script>
