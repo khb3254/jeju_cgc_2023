@@ -35,6 +35,47 @@ def jcarrot(request):
     jcarrot = Jeju.objects.all()
     return render(request, "detail/jeju/carrot_jeju.html", {"jcarrot": jcarrot} )
 
+def jbroccoli(request):
+    jbroccoli = Jeju.objects.all()
+    return render(request, "detail/jeju/broccoli_jeju.html", {"jbroccoli": jbroccoli} )
+
+def jcabbage(request):
+    jcabbage = Jeju.objects.all()
+    return render(request, "detail/jeju/cabbage_jeju.html", {"jcabbage": jcabbage} )
+
+def jmandarin(request):
+    jmandarin = Jeju.objects.all()
+    return render(request, "detail/jeju/mandarin_jeju.html", {"jmandarin": jmandarin} )
+
+def jradish(request):
+    jradish = Jeju.objects.all()
+    return render(request, "detail/jeju/radish_jeju.html", {"jradish": jradish} )
+
+
+
+def scarrot(request):
+    scarrot = Jeju.objects.all()
+    return render(request, "detail/seogwipo/carrot_seogwipo.html", {"scarrot": scarrot} )
+
+def sbroccoli(request):
+    sbroccoli = Jeju.objects.all()
+    return render(request, "detail/seogwipo/broccoli_seogwipo.html", {"sbroccoli": sbroccoli} )
+
+def scabbage(request):
+    scabbage = Jeju.objects.all()
+    return render(request, "detail/seogwipo/cabbage_seogwipo.html", {"scabbage": scabbage} )
+
+def smandarin(request):
+    smandarin = Jeju.objects.all()
+    return render(request, "detail/seogwipo/mandarin_seogwipo.html", {"smandarin": smandarin} )
+
+def sradish(request):
+    sradish = Jeju.objects.all()
+    return render(request, "detail/seogwipo/radish_seogwipo.html", {"sradish": sradish} )
+
+
+
+
 # Create your views here.
 def crop_market_data_view(request):
     data = CropMarketData.objects.all()
