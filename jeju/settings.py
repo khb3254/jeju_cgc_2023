@@ -78,6 +78,7 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
+        "ATOMIC_REQUESTS": True, # 트랜잭션 자동 관리 활성화
     }
 }
 
