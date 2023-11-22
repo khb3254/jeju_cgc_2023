@@ -15,7 +15,7 @@ var myLineChart = new Chart(ctx, {
       borderColor: "#04B404",
       pointRadius: 5,
       pointBackgroundColor: "#04B404",
-      pointBorderColor: "#04B404",
+      pointBorderColor: "#F1F8E0",
       pointHoverRadius: 5,
       pointHoverBackgroundColor: "#04B404",
       pointHitRadius: 50,
