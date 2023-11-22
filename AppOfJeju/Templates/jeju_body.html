@@ -1,0 +1,101 @@
+<div id="layoutSidenav_content">
+      <main>
+          <div class="container">
+                  <div class="row row-cols-2 row-cols-lg-5">
+                          <div class="col-l-2 col-md-5">
+                              <div class="card bg-primary text-white mb-4">
+                                  <div class="card-body">당근</div>
+                                  <div class="card-footer d-flex align-items-center justify-content-between">
+                                      <a class="small text-white stretched-link" onclick="toggleDashboard(0)" href="#">View Details</a>
+                                      <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-l-2 col-md-5">
+                              <div class="card bg-warning text-white mb-4">
+                                  <div class="card-body">감귤</div>
+                                  <div class="card-footer d-flex align-items-center justify-content-between">
+                                      <a class="small text-white stretched-link" href="#" onclick="toggleDashboard(1)">View Details</a>
+                                      <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-l-2 col-md-5">
+                              <div class="card bg-success text-white mb-4">
+                                  <div class="card-body">브로콜리</div>
+                                  <div class="card-footer d-flex align-items-center justify-content-between">
+                                      <a class="small text-white stretched-link" href="#" onclick="toggleDashboard(2)">View Details</a>
+                                      <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-l-2 col-md-5">
+                              <div class="card bg-danger text-white mb-4">
+                                  <div class="card-body">양배추</div>
+                                  <div class="card-footer d-flex align-items-center justify-content-between">
+                                      <a class="small text-white stretched-link" href="#" onclick="toggleDashboard(3)">View Details</a>
+                                      <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-l-2 col-md-5">
+                              <div class="card bg-secondary text-white mb-4">
+                                  <div class="card-body">무</div>
+                                  <div class="card-footer d-flex align-items-center justify-content-between">
+                                      <a class="small text-white stretched-link" href="#" onclick="toggleDashboard(4)">View Details</a>
+                                      <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  <!-- 대시보드 엘리먼트들은 여기에 위치해야 합니다. -->
+                <div class="dashboard-container">
+                    <!-- 나머지 대시보드 엘리먼트들도 같은 방식으로 추가 -->
+                    <!--제주도 당근 대시보드-->
+                        <div class="row">
+                            <div class='tableauPlaceholder' id='viz1700620255451' ><noscript><a href='#'><img alt='대시보드 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;11&#47;1122___17006197646780&#47;sheet2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='1122___17006197646780&#47;sheet2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;11&#47;1122___17006197646780&#47;sheet2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='ko-KR' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1700620255451');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='1310px';vizElement.style.maxWidth='1320px';vizElement.style.width='100%';vizElement.style.height='527px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='1310px';vizElement.style.maxWidth='1320px';vizElement.style.width='100%';vizElement.style.height='527px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                        </div>
+                        <!--제주도 감귤 대시보드-->
+                        <div class="row">
+                            <div class='tableauPlaceholder' id='viz1700620389906' style='position: relative; display: none;'><noscript><a href='#'><img alt='대시보드 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;11&#47;1122___17006194746450&#47;sheet2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='1122___17006194746450&#47;sheet2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;11&#47;1122___17006194746450&#47;sheet2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='ko-KR' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1700620389906');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='1310px';vizElement.style.maxWidth='1320px';vizElement.style.width='100%';vizElement.style.height='527px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='1310px';vizElement.style.maxWidth='1320px';vizElement.style.width='100%';vizElement.style.height='527px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                        </div>
+                        <!--제주도 브로콜리 대시보드-->
+                        <div class="row">
+                            <div class='tableauPlaceholder' id='viz1700620471152' style='position: relative; display: none;'><noscript><a href='#'><img alt='대시보드 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;11&#47;1122__&#47;sheet2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='1122__&#47;sheet2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;11&#47;1122__&#47;sheet2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='ko-KR' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1700620471152');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='1310px';vizElement.style.maxWidth='1320px';vizElement.style.width='100%';vizElement.style.height='527px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='1310px';vizElement.style.maxWidth='1320px';vizElement.style.width='100%';vizElement.style.height='527px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                        </div>
+                        <!--제주도 양배추 대시보드-->
+                        <div class="row">
+                            <div class='tableauPlaceholder' id='viz1700620525229' style='position: relative; display: none;'><noscript><a href='#'><img alt='대시보드 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;11&#47;1122___17006197065050&#47;sheet2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='1122___17006197065050&#47;sheet2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;11&#47;1122___17006197065050&#47;sheet2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='ko-KR' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1700620525229');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='1310px';vizElement.style.maxWidth='1320px';vizElement.style.width='100%';vizElement.style.height='527px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='1310px';vizElement.style.maxWidth='1320px';vizElement.style.width='100%';vizElement.style.height='527px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                        </div>
+                        <!--제주도 무 대시보드-->
+                        <div class="row">
+                            <div class='tableauPlaceholder' id='viz1700620576822' style='position: relative; display: none;'><noscript><a href='#'><img alt='대시보드 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;11&#47;1122___17006198620960&#47;sheet2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='1122___17006198620960&#47;sheet2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;11&#47;1122___17006198620960&#47;sheet2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='ko-KR' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1700620576822');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='1310px';vizElement.style.maxWidth='1320px';vizElement.style.width='100%';vizElement.style.height='527px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='1310px';vizElement.style.maxWidth='1320px';vizElement.style.width='100%';vizElement.style.height='527px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                        </div>
+                </div>
+            </div>
+    </main>
+    <script>
+    // 페이지가 처음로드될 때 당근 대시보드만 표시합니다.
+    document.addEventListener("DOMContentLoaded", function() {
+        toggleDashboard(0);
+    });
+
+    function toggleDashboard(index) {
+        // 대시보드 엘리먼트를 가져옵니다.
+        var dashboards = document.querySelectorAll(".dashboard-container .tableauPlaceholder");
+
+        // 모든 대시보드를 숨깁니다.
+        dashboards.forEach(function(dashboard) {
+            dashboard.style.display = "none";
+        });
+
+        // 특정 대시보드를 표시합니다.
+        dashboards[index].style.display = "block";
+    }
+
+    function showDashboard(index) {
+        // View Details 링크를 클릭하면 해당 대시보드를 표시합니다.
+        toggleDashboard(index);
+    }
+    </script>
+</div>

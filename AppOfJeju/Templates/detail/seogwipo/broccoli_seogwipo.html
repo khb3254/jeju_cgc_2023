@@ -2,39 +2,25 @@
 <html lang="ko" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
-    <!-- Favicon-->
+    <!-- 탭 부분 로고 사진 및 타이틀-->
     <link rel="icon" type="image/x-icon" href="static/main_static/assets/dol_removebg.png"/>
     <title>제주 특산물</title>
-    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet"/>
+    <!--css 모음집-->
     <link href="static/detail_static/css/styles.css" rel="stylesheet"/>
     <link href="static/detail_static/css/calender.css" rel="stylesheet"/>
-    <link href="static/special_static/css/styles.css" rel="stylesheet"/>
+    <!--사이드바 폰트어썸-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/cfeddde540.js" crossorigin="anonymous"></script>
 </head>
 <body class="sb-nav-fixed">
-
-<!--여기서부터 navbar인데 어찌해야할지 모르겠네 -->
+<!--네비게이션바 -->
 <main class="flex-shrink-0">
-    <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
         <div class="container px-5">
             <a class="navbar-brand" href="{% url 'main' %}">
                 <img class="profile-img" src="static/main_static/assets/jeju_logo.png" href="{% url 'main' %}"></a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                    <li class="nav-item"><a class="nav-link" href="{% url 'main' %}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'jeju' %}">Detail</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'process' %}">Process</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'resume' %}">Resume</a></li>
-                </ul>
-            </div>
-            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
-                    class="fas fa-bars">Zoom</i></button>
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!">
+                <i class="fas fa-bars"></i></button>
         </div>
     </nav>
 </main>
@@ -48,7 +34,7 @@
                     <div class="card bg-primary text-white mb-4">
                         <div class="card-body">당근</div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="{% url 'jcarrot' %}">View Details</a>
+                            <a class="small text-white stretched-link" href="{% url 'scarrot' %}">View Details</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
@@ -57,7 +43,7 @@
                     <div class="card bg-warning text-white mb-4">
                         <div class="card-body">감귤</div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="{% url 'jmandarin' %} ">View Details</a>
+                            <a class="small text-white stretched-link" href="{% url 'smandarin' %} ">View Details</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
@@ -75,7 +61,7 @@
                     <div class="card bg-danger text-white mb-4">
                         <div class="card-body">양배추</div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="{% url 'jcabbage' %}">View Details</a>
+                            <a class="small text-white stretched-link" href="{% url 'scabbage' %}">View Details</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
@@ -84,28 +70,27 @@
                     <div class="card bg-secondary text-white mb-4">
                         <div class="card-body">무</div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="{% url 'jradish' %}">View Details</a>
+                            <a class="small text-white stretched-link" href="{% url 'sradish' %}">View Details</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- 당근 카드표-->
+            <!-- 메인 사진 및 차트-->
             <div class="row">
                 <div class="col-xl-6">
                     <div class="card mb-6">
-                        <img class="profile-img" src="https://imgnn.seoul.co.kr/img/upload/2014/05/08/SSI_20140508143323_V.jpg"
-                             width="640" height="430">
+                        <img class="profile-img" src="https://imgnn.seoul.co.kr/img/upload/2016/07/08/SSI_20160708142213_V.jpg" width="640" height="430">
                     </div>
                 </div>
                 <div class="col-xl-6">
                     <div class="card mb-4">
                         <div class="card-header">
                             <i class="fas fa-chart-area me-1"></i>
-                            제주시 감귤 가격변동
+                                서귀포시 브로콜리 가격변동
                         </div>
                         <div class="card-body">
-                            <canvas id="BroccoliJejuChart" width="100%" height="60"></canvas>
+                            <canvas id="CarrotJejuChart" width="100%" height="60"></canvas>
                         </div>
                     </div>
                 </div>
@@ -117,106 +102,102 @@
     <div class="container text-center">
         <div class="row align-items-start">
             <div class="col">
-                <h2> 제주시 추천 온라인 브로콜리 스토어 </h2>
+                <h2> 서귀포시 추천 온라인 브로콜리 스토어 </h2>
             </div>
         </div>
     </div>
     <br><br><br><br>
-    <!-- 당근 마켓 -->
+    <!-- 스토어 정리 -->
     <section>
         <div class="container px-lg-5">
-            <!-- Page Features-->
             <div class="row gx-lg-5">
                 <div class="col-lg-6 col-xxl-4 mb-5">
                     <div class="card bg-light border-0 h-100">
                         <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <a href="https://smartstore.naver.com/farmerbrothers_jeju/products/6087673965?n_media=11068&n_query=%EC%A0%9C%EC%A3%BC%EB%B8%8C%EB%A1%9C%EC%BD%9C%EB%A6%AC&n_rank=1&n_ad_group=grp-a001-02-000000038751997&n_ad=nad-a001-02-000000274004896&n_campaign_type=2&n_mall_id=ncp_1o20rh_01&n_mall_pid=6087673965&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlp7r51vs%7Cci%3D0yK0000H7zLzib3301mf%7Ctr%3Dpla%7Chk%3D16b9220d88d4a13c5ad0fceb5bad669cc3da0163"
+                            <a href="https://smartstore.naver.com/jeju-beet/products/6051912727"
                                target="_blank">
                                 <div class="mb-4 mt-n4">
-                                    <img class="profile-img" src="static/special_static/assets/jeju/broccoli/농부형제.jpg" width="250"
-                                         height="120">
+                                        <img class="profile-img" src="static/special_static/assets/seogwipo/broccoli/절부암농장.jpg" width="250"
+                                             height="120">
                                 </div>
                             </a>
-                            <h2 class="fs-4 fw-bold">농부형제</h2>
-                            <p>성님과 아시가 건강한<br>제주것들을 소개합니다</p>
+                            <h2 class="fs-4 fw-bold">절부암농장</h2>
+                            <p>제주의 사계절 농산물을 만나보세요</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-6 col-xxl-4 mb-5">
+                 <div class="col-lg-6 col-xxl-4 mb-5">
                     <div class="card bg-light border-0 h-100">
                         <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <a href="https://smartstore.naver.com/oldestson/products/9457531636?n_media=11068&n_query=%EC%A0%9C%EC%A3%BC%EB%B8%8C%EB%A1%9C%EC%BD%9C%EB%A6%AC&n_rank=2&n_ad_group=grp-a001-02-000000034080488&n_ad=nad-a001-02-000000270600032&n_campaign_type=2&n_mall_id=ncp_1o0en6_01&n_mall_pid=9457531636&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlp7r9ojs%7Cci%3D0yS000057PLzF%5FnOrfnw%7Ctr%3Dpla%7Chk%3D20d0239d1640b7cc8ceec6267a608795ef785405"
+                            <a href="https://smartstore.naver.com/baekmi/products/5325619390?NaPm=ct%3Dlp90ofmo%7Cci%3D8fe8b79487410b63ad2c8e015b62ef4c6586d8cf%7Ctr%3Dslsl%7Csn%3D886319%7Chk%3D9592702717d05520f705292f54a15ed62e402b7c"
                                target="_blank">
                                 <div class="mb-4 mt-n4">
-                                    <img class="profile-img" src="static/special_static/assets/jeju/broccoli/우리집큰아들.jpg" width="250"
-                                         height="120">
+                                        <img class="profile-img" src="static/special_static/assets/seogwipo/broccoli/백미양식.jpg" width="250"
+                                             height="120">
                                 </div>
                             </a>
-                            <h2 class="fs-4 fw-bold">우리집큰아들</h2>
-                            <p>우리집 믿을맨 듬직 큰아들</p>
+                            <h2 class="fs-4 fw-bold">백미양식</h2>
+                            <p>맛있고 믿을 수 있는 식품 큐레이팅 <br>전문몰 '백미양식'입니다</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-6 col-xxl-4 mb-5">
+                 <div class="col-lg-6 col-xxl-4 mb-5">
                     <div class="card bg-light border-0 h-100">
                         <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <a href="https://smartstore.naver.com/therealfarmers/products/9464073803?n_media=11068&n_query=%EC%A0%9C%EC%A3%BC%EB%B8%8C%EB%A1%9C%EC%BD%9C%EB%A6%AC&n_rank=3&n_ad_group=grp-a001-02-000000036071873&n_ad=nad-a001-02-000000271125124&n_campaign_type=2&n_mall_id=ncp_1oh9c3_01&n_mall_pid=9464073803&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlp7rbsxs%7Cci%3D0ym0001C7PLzZB058fkP%7Ctr%3Dpla%7Chk%3D93d4ca2145777f26bdc989f148a22ad6ddc495b3"
+                            <a href="https://smartstore.naver.com/ktfood/products/9503098502?NaPm=ct%3Dlp90rlts%7Cci%3De6c6b1be85ee9a8f4d0289006cde433dfaf103c6%7Ctr%3Dslsl%7Csn%3D330937%7Chk%3D4fa3d34fc0c356e131c9df3b1833cac28fedfe0a"
                                target="_blank">
                                 <div class="mb-4 mt-n4">
-                                    <img class="profile-img" src="static/special_static/assets/jeju/broccoli/더리얼파머스.jpg" width="250"
-                                         height="120">
+                                        <img class="profile-img" src="static/special_static/assets/seogwipo/broccoli/감성먹거리.jpg" width="250"
+                                             height="120">
                                 </div>
                             </a>
-                            <h2 class="fs-4 fw-bold">더리얼파머스</h2>
-                            <p>THE REAL FARMERS, 더리얼파머스</p>
+                            <h2 class="fs-4 fw-bold">감성먹거리</h2>
+                            <p> 자연이 선사하는 최고의 먹거리로<br>건강한 라이프 스타일을 추구</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-6 col-xxl-4 mb-5">
+                 <div class="col-lg-6 col-xxl-4 mb-5">
                     <div class="card bg-light border-0 h-100">
                         <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <a href="https://smartstore.naver.com/minsfarmer?NaPm=ct%3Dlp7rdrj8%7Cci%3Dshopn%7Ctr%3Dslsl%7Chk%3D9e924c58a8c9291ffc27c63180456ef246492665%7Ctrx%3Dundefined"
+                            <a href="https://smartstore.naver.com/ndrcommerce/products/9475296203?NaPm=ct%3Dlp90tzh4%7Cci%3Dd2fe8efd43edd838cf99cc5bf43e87b917153d0b%7Ctr%3Dslsl%7Csn%3D8312184%7Chk%3D00ae5e4f12efc0b3ebb4ec3745faced7072b95cc"
                                target="_blank">
                                 <div class="mb-4 mt-n4">
-                                    <img class="profile-img" src="static/special_static/assets/jeju/broccoli/민스농원.jpg" width="250"
-                                         height="120">
+                                        <img class="profile-img" src="static/special_static/assets/seogwipo/broccoli/남다른.jpg" width="250"
+                                             height="120">
                                 </div>
                             </a>
-                            <h2 class="fs-4 fw-bold">민스농원</h2>
-                            <p>비트, 콜라비, 빨간양배추, 빨간양파,<br>브로콜리를 농사지어 발송해드립니다.</p>
+                            <h2 class="fs-4 fw-bold">남다른</h2>
+                            <p>남다른 제품을 제공합니다</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <a href="https://smartstore.naver.com/by_routes/products/9440248317?NaPm=ct%3Dlp90vt28%7Cci%3D201d098983e94adaf4621e39160ca9303f079a79%7Ctr%3Dslsl%7Csn%3D6418314%7Chk%3D955003ffc2f918ff24329e3a4e101b018b0dcfff"
+                               target="_blank">
+                                <div class="mb-4 mt-n4">
+                                        <img class="profile-img" src="static/special_static/assets/seogwipo/broccoli/바이루츠.jpg" width="250"
+                                             height="120">
+                                </div>
+                            </a>
+                            <h2 class="fs-4 fw-bold">바이루츠</h2>
+                            <p>올바른 선택 [바이루츠]</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-xxl-4 mb-5">
                     <div class="card bg-light border-0 h-100">
                         <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <a href="https://smartstore.naver.com/jujugyfarm/products/6033870578"
+                            <a href="https://smartstore.naver.com/gtogshop/products/7550789663?NaPm=ct%3Dlp90x44o%7Cci%3D69a4753c4861817aadf615365f8752aae57f05ec%7Ctr%3Dslsl%7Csn%3D459526%7Chk%3Dde900923acd8a62b348c2a0c31c6bd49d3054780"
                                target="_blank">
                                 <div class="mb-4 mt-n4">
-                                    <img class="profile-img" src="static/special_static/assets/jeju/broccoli/길영농원.jpg" width="250"
-                                         height="120">
+                                        <img class="profile-img" src="static/special_static/assets/seogwipo/broccoli/지투지샵.jpg" width="250"
+                                             height="120">
                                 </div>
                             </a>
-                            <h2 class="fs-4 fw-bold">길영농원</h2>
-                            <p>소중한 사람, 가족과 함께 나누고 싶은 제주 농산물</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xxl-4 mb-5">
-                    <div class="card bg-light border-0 h-100">
-                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <a href="https://smartstore.naver.com/tallmama?NaPm=ct%3Dlp7riebn%7Cci%3Dshopn%7Ctr%3Dslsl%7Chk%3Dcc297fb9f6c2034ef3a682ef629c89bdb21114b2%7Ctrx%3Dundefined"
-                               target="_blank">
-                                <div class="mb-4 mt-n4">
-                                    <img class="profile-img" src="static/special_static/assets/jeju/broccoli/키큰엄마브로콜리.jpg" width="250"
-                                         height="120">
-                                </div>
-                            </a>
-                            <h2 class="fs-4 fw-bold">키큰엄마브로콜리</h2>
-                            <p>제주에서 생산한 브로콜리, 레드비트,<br>콜라비 등 신선한 채소를 보내드려요</p>
+                            <h2 class="fs-4 fw-bold">지투지샵</h2>
+                            <p>농산물 산지직송 푸드마켓<br>☆생산지의신선함☆</p>
                         </div>
                     </div>
                 </div>
@@ -231,7 +212,7 @@
     <script src="static/detail_static/js/calender.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="static/detail_static/assets/demo/chart-area-demo.js"></script>
-    <script src="static/special_static/js/jeju_chart/broccoli_chart.js"></script>
+    <script src="static/special_static/js/jeju_chart/carrot_chart.js"></script>
     <script src="static/detail_static/assets/demo/chart-bar-demo.js"></script>
     <script src="static/special_static/js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"

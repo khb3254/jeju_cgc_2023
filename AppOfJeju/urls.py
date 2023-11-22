@@ -5,10 +5,8 @@ urlpatterns = [
     path("", views.main_page, name="main"),
     path("jeju", views.jeju, name="jeju"),
     path("seogwipo", views.seogwipo, name="seoqwipo"),
-    path("main_of_detail", views.main_of_detail, name="main_of_detail"),
-    path("process", views.process, name="process"),
-    path("resume", views.resume, name="resume"),
-    path("code",views.code, name="code"),
+    path("memo",views.memo, name="memo"),
+
     path("carrot_jeju", views.jcarrot, name="jcarrot"),
     path("cabbage_jeju", views.jcabbage, name="jcabbage"),
     path("mandarin_jeju", views.jmandarin, name="jmandarin"),

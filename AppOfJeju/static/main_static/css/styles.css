@@ -91,6 +91,12 @@
   }
 }
 
+@media (min-width:768px){
+}
+/* 데스크톱 */
+@media (min-width:980px){
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);

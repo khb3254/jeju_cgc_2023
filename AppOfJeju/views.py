@@ -15,21 +15,6 @@ def seogwipo(request):
     seogwipo = Jeju.objects.all()
     return render(request, "seogwipo.html", {"seogwipo": seogwipo} )
 
-def main_of_detail(request):
-    main_of_detail = Jeju.objects.all()
-    return render(request, "main_of_detail.html", {"main_of_detail": main_of_detail} )
-
-def process(request):
-    process = Jeju.objects.all()
-    return render(request, "process.html", {"process": process} )
-
-def resume(request):
-    resume = Jeju.objects.all()
-    return render(request, "resume.html", {"resume": resume} )
-
-def code(request):
-    code = Jeju.objects.all()
-    return render(request, "code.html", {"code": code} )
 
 def jcarrot(request):
     jcarrot = Jeju.objects.all()
@@ -73,7 +58,9 @@ def sradish(request):
     sradish = Jeju.objects.all()
     return render(request, "detail/seogwipo/radish_seogwipo.html", {"sradish": sradish} )
 
-
+def memo(request):
+    memo = Jeju.objects.all()
+    return render(request, "memo.html", {"memo": memo} )
 
 
 # Create your views here.
