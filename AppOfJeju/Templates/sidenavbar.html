@@ -1,90 +1,75 @@
 <!-- 사이드 메뉴 -->
 <div id="layoutSidenav">
-  <div id="layoutSidenav_nav">
-      <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-          <div class="sb-sidenav-menu">
-              <div class="nav">
-                  <div class="sb-sidenav-menu-heading">Region</div>
-                  <a class="nav-link" href="{% url 'main_of_detail' %}">
-                      <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                      내용 공유를 위한 메뉴
-                  </a>
-                  <a class="nav-link" href="{% url 'jeju' %}">
-                      <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                      Jeju
-                  </a>
-                  <a class="nav-link" href="{% url 'seoqwipo' %}">
-                      <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                      Seogwipo
-                  </a>
+    <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                    <div class="sb-sidenav-menu-heading">Region | 지역</div>
+                    <a class="nav-link" href="{% url 'jeju' %}">
+                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        Jeju
+                    </a>
+                    <a class="nav-link" href="{% url 'seoqwipo' %}">
+                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        Seogwipo
+                    </a>
 
-                  <!-- Specialties 메뉴-->
-                  <div class="sb-sidenav-menu-heading">Specialties</div>
-                      <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#JejuPages" aria-expanded="false" aria-controls="collapsePages">
-                          <div class="sb-nav-link-icon"><i class="fa-solid fa-star" style="color: #79808b;"></i></div>
-                          Jeju
-                          <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                      </a>
-                      <div class="collapse" id="JejuPages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                          <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                              <a class="nav-link collapsed" href="{% url 'jcarrot' %} ">
-                                  당근(Carrot)
-                              </a>
-                              <a class="nav-link collapsed" href="{% url 'jcarrot' %}" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                  감귤(Mandarin)
-                              </a>
-                              <a class="nav-link collapsed" href="https://www.jejusi.go.kr/index.ac" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                  브로콜리(Broccoli)
-                              </a>
-                              <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                  양배추(Cabbage)
-                              </a>
-                              <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                  무(Radish)
-                              </a>
-                          </nav>
-                       </div>
-                          <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#SeogwipoPages" aria-expanded="false" aria-controls="collapsePages">
-                              <div class="sb-nav-link-icon"><i class="fa-solid fa-star" style="color: #79808b;"></i></div>
-                              Seogwipo
-                              <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                          </a>
-                              <div class="collapse" id="SeogwipoPages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                                  <nav class="sb-sidenav-menu-nested nav accordion" id="SeogwipoPages">
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        당근(Carrot)
-                                    </a>
-                                    <a class="nav-link collapsed" href="{% url 'resume' %}" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        감귤(Mandarin)
-                                    </a>
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        브로콜리(Broccoli)
-                                    </a>
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        양배추(Cabbage)
-                                    </a>
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        무(Radish)
-                                    </a>
-                                 </nav>
-                              </div>
-
-                  <!-- Resume 사이드 메뉴 -->
-                  <div class="sb-sidenav-menu-heading">Procedure</div>
-                  <a class="nav-link" href="{% url 'process' %}">
-                      <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                      Process
-                  </a>
-                  <a class="nav-link" href="{% url 'code' %}">
-                      <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                      Code
-                  </a>
-                  <a class="nav-link" href="{% url 'resume' %}">
-                      <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                      Resume
-                  </a>
-              </div>
-          </div>
-          <img class="profile-img" src="static/main_static/assets/dol_removebg.png" alt="..." />
-      </nav>
-  </div>
+                    <!-- Specialties 메뉴-->
+                    <div class="sb-sidenav-menu-heading">Specialties | 특산품</div>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#JejuPages"
+                       aria-expanded="false" aria-controls="collapsePages">
+                        <div class="sb-nav-link-icon"><i class="fa-solid fa-star" style="color: #79808b;"></i></div>
+                        Jeju
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="JejuPages" aria-labelledby="headingTwo"
+                         data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                            <a class="nav-link collapsed" href="{% url 'jcarrot' %} ">
+                                당근(Carrot)
+                            </a>
+                            <a class="nav-link collapsed" href="{% url 'jmandarin' %}">
+                                감귤(Mandarin)
+                            </a>
+                            <a class="nav-link collapsed" href="{% url 'jbroccoli' %}">
+                                브로콜리(Broccoli)
+                            </a>
+                            <a class="nav-link collapsed" href="{% url 'jcabbage' %}">
+                                양배추(Cabbage)
+                            </a>
+                            <a class="nav-link collapsed" href="{% url 'jradish' %}">
+                                무(Radish)
+                            </a>
+                        </nav>
+                    </div>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#SeogwipoPages"
+                       aria-expanded="false" aria-controls="collapsePages">
+                        <div class="sb-nav-link-icon"><i class="fa-solid fa-star" style="color: #79808b;"></i></div>
+                        Seogwipo
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="SeogwipoPages" aria-labelledby="headingTwo"
+                         data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav accordion" id="SeogwipoPages">
+                            <a class="nav-link collapsed" href="{% url 'scarrot' %}">
+                                당근(Carrot)
+                            </a>
+                            <a class="nav-link collapsed" href="{% url 'smandarin' %}">
+                                감귤(Mandarin)
+                            </a>
+                            <a class="nav-link collapsed" href="{% url 'sbroccoli' %}">
+                                브로콜리(Broccoli)
+                            </a>
+                            <a class="nav-link collapsed" href="{% url 'scabbage' %}">
+                                양배추(Cabbage)
+                            </a>
+                            <a class="nav-link collapsed" href="{% url 'sradish' %}">
+                                무(Radish)
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <img class="profile-img" src="static/main_static/assets/dol_removebg.png" alt="..."/>
+        </nav>
+    </div>

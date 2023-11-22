@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <!-- 타이틀 로고-->
+    <link rel="icon" type="image/x-icon" href="static/main_static/assets/dol_removebg.png"/>
+    <title>제주 특산물</title>
+
+    <link href="static/detail_static/css/styles.css" rel="stylesheet"/>
+    <link href="static/detail_static/css/calender.css" rel="stylesheet"/>
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/cfeddde540.js" crossorigin="anonymous"></script>
+</head>
+<body class="sb-nav-fixed">
+<main>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container px-5">
+            <a class="navbar-brand" href="{% url 'main' %}">
+                <img class="profile-img" src="static/main_static/assets/jeju_logo.png" href="{% url 'main' %}"></a>
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                    class="fas fa-bars">Zoom</i></button>
+        </div>
+    </nav>
+</main>
+
+{% include "sidenavbar.html" %}
+<div id="layoutSidenav_content">
+    <main>
+        <div class="container">
+            <div class="row row-cols-2 row-cols-lg-5">
+                <div class="col-l-2 col-md-5">
+                    <div class="card bg-primary text-white mb-4">
+                        <div class="card-body">당근</div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <a class="small text-white stretched-link" href="#">View Details</a>
+                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-l-2 col-md-5">
+                    <div class="card bg-warning text-white mb-4">
+                        <div class="card-body">감귤</div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <a class="small text-white stretched-link" href="#">View Details</a>
+                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-l-2 col-md-5">
+                    <div class="card bg-success text-white mb-4">
+                        <div class="card-body">브로콜리</div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <a class="small text-white stretched-link" href="#">View Details</a>
+                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-l-2 col-md-5">
+                    <div class="card bg-danger text-white mb-4">
+                        <div class="card-body">양배추</div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <a class="small text-white stretched-link" href="#">View Details</a>
+                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-l-2 col-md-5">
+                    <div class="card bg-secondary text-white mb-4">
+                        <div class="card-body">무</div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <a class="small text-white stretched-link" href="#">View Details</a>
+                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6">
+                    <h2>2023.11.22 수요일</h2>
+                    - 사이드 Navbar 아래쪽 code, resume, process 등등 삭제 <br>
+                    - 사이드 Navbar Dropdown시 옆에 나오는 바 삭제 <br>
+                    - (사실 어떻게 삭제했는지는 모르겠지만 깔끔~해짐) <br>
+                    - 제주 / 서귀포 디테일 사이트 작업 <br>
+                    - 제주 / 서귀포 링크 / 사진 연결 완료 <br>
+                    - 제주 / 서귀포 각각 가격변동 차트 최신화 작업해야함 <br>
+                    - 코드 정리 1차 완료 <br>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+{% include "footer.html" %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+<script src="static/detail_static/js/scripts.js"></script>
+<script src="static/detail_static/js/calender.js"></script>
+<script src="static/detail_static/assets/demo/chart-area-demo.js"></script>
+<script src="static/detail_static/assets/demo/chart-bar-demo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+        crossorigin="anonymous"></script>
+<script src="static/detail_static/js/datatables-simple-demo.js"></script>
+</body>
+</html>
