@@ -1,43 +1,56 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="utf-8"/>
-    <!-- 탭 부분 로고 사진 및 타이틀-->
-    <link rel="icon" type="image/x-icon" href="static/main_static/assets/dol_removebg.png"/>
-    <title>제주 특산물</title>
-    <!--css 모음집-->
-    <link href="static/detail_static/css/styles.css" rel="stylesheet"/>
-    <link href="static/detail_static/css/calender.css" rel="stylesheet"/>
-    <!--사이드바 폰트어썸-->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/cfeddde540.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="static/assets/dol_removebg.png" />
+        <title>제주 특산물</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="static/detail_static/css/styles.css" rel="stylesheet" />
+        <link href="static/detail_static/css/calender.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/cfeddde540.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
 
-<body class="sb-nav-fixed">
-<main class="flex-shrink-0">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-        <div class="container px-5">
-            <a class="navbar-brand" href="{% url 'main' %}">
-                <img class="profile-img" src="static/main_static/assets/jeju_logo.png" href="{% url 'main' %}"></a>
-            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!">
-                <i class="fas fa-bars"></i></button>
-        </div>
-    </nav>
-</main>
+    <!--여기서부터 navbar인데 어찌해야할지 모르겠네 -->
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="{% url 'main' %}">
+                        <img class="profile-img" src="static/main_static/assets/jeju_logo.png"  href="{% url 'main' %}"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item"><a class="nav-link" href="{% url 'main' %}">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'jeju' %}">Detail</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'process' %}">Process</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'resume' %}">Resume</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars">Zoom</i></button>
+                </div>
+            </nav>
+        </main>
 
-{% include "sidenavbar.html" %}
-{% include "body.html" %}
-{% include "calender.html" %}
-{% include "footer.html" %}
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
-<script src="static/detail_static/js/scripts.js"></script>
-<script src="static/detail_static/js/calender.js"></script>
-<script src="static/detail_static/assets/demo/chart-area-demo.js"></script>
-<script src="static/detail_static/assets/demo/chart-bar-demo.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
-        crossorigin="anonymous"></script>
-<script src="static/detail_static/js/datatables-simple-demo.js"></script>
-</body>
+        {% include "seogwipo_body.html" %}
+        {% include "calender.html" %}
+        {% include "sidenavbar.html" %}
+        {% include "footer.html" %}
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="static/detail_static/js/scripts.js"></script>
+        <script src="static/detail_static/js/calender.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="static/detail_static/assets/demo/chart-area-demo.js"></script>
+        <script src="static/detail_static/assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="static/detail_static/js/datatables-simple-demo.js"></script>
+    </body>
 </html>
