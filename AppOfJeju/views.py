@@ -1,5 +1,8 @@
 from django.shortcuts import render
-from.models import Jeju, CropMarketData
+from.models import Jeju, CropMarketData, PredictionData
+from django.template.loader import render_to_string
+from django.http import HttpResponse
+from datetime import datetime
 
 # Create your views here.
 
@@ -64,6 +67,22 @@ def memo(request):
 
 
 # Create your views here.
-def crop_market_data_view(request):
-    data = CropMarketData.objects.all()
-    return render(request, 'calender.html', {'data':data})
+
+def get_data_for_date(request):
+    selected_date = request.GET.get('date')
+
+    try:
+        # 날짜 형식 검증
+        valid_date = datetime.strptime(selected_date, '%Y-%m-%d')
+    except ValueError:
+        # 날짜 형식이 잘못된 경우 적절한 응답 반환
+        return HttpResponse("Invalid date format", status=400)
+
+    data_queryset = PredictionData.objects.filter(crop_date=selected_date)
+    context = {'data': data_queryset}
+    html = render_to_string('calender.html', {'data': data_queryset})
+    return HttpResponse(html)
+
+def market_data_list(request):
+    market_data = CropMarketData.objects.all()
+    return render(request, 'calender.html', {'market_data':market_data})

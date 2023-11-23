@@ -24,7 +24,14 @@
                 <div class="day">금</div>
                 <div class="day">토</div>
             </div>
-            <div class="dates"></div>
+            <div class="dates">
+                {% for date in dates %}
+                    <!-- date-itm 객체에서 year, month, day 속성을 사용해 data-date를 설정 -->
+                    <div class="date" data-date="{{ date.year }}-{{ date.month|stringformat:'02d' }}-{{ date.day|stringformat:'02d' }}">
+                        {{ date.day }}
+                    </div>
+                {% endfor %}
+            </div>
         </div>
         <!-- 특상품 금액예측 창 -->
         <div class="resv-wrapper">
@@ -50,55 +57,21 @@
                                 <table id="datatablesSimple">
                                     <thead>
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Local</th>
+                                        <th>Crop</th>
                                         <th>Company</th>
-                                        <th>Kg</th>
                                         <th>Price</th>
-                                        <th>Start date</th>
+                                        <th>Date</th>
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    {% for item in data %}
                                     <tr>
-                                        <td>당근(Carrot)</td>
-                                        <td>제주시</td>
-                                        <td>도하네농장</td>
-                                        <td>1Kg</td>
-                                        <td>8,900원</td>
-                                        <td>2011/04/25</td>
+                                        <td>{{ item.crop_type }}</td>
+                                        <td>{{ item.supplier }}</td>
+                                        <td>{{ item.crop_price }}</td>
+                                        <td>{{ item.crop_date }}</td>
                                     </tr>
-                                    <tr>
-                                        <td>감귤(Mandarin)</td>
-                                        <td>제주시</td>
-                                        <td>소담제주</td>
-                                        <td>1.3Kg</td>
-                                        <td>12,000원</td>
-                                        <td>2011/07/25</td>
-                                    </tr>
-                                    <tr>
-                                        <td>브로콜리(Broccoli)</td>
-                                        <td>제주시</td>
-                                        <td>오가닉타운스</td>
-                                        <td>1Kg</td>
-                                        <td>12,000원</td>
-                                        <td>2009/01/12</td>
-                                    </tr>
-                                    <tr>
-                                        <td>양배추(Cabbage)</td>
-                                        <td>제주시</td>
-                                        <td>하늘푸드</td>
-                                        <td>2Kg</td>
-                                        <td>3,800워</td>
-                                        <td>2012/03/29</td>
-                                    </tr>
-                                    <tr>
-                                        <td>무(Radish)</td>
-                                        <td>제주시</td>
-                                        <td>연미농장</td>
-                                        <td>1.2Kg</td>
-                                        <td>5,900원</td>
-                                        <td>2008/11/28</td>
-                                    </tr>
+                                    {% endfor %}
                                     </tbody>
                                 </table>
                             </div>

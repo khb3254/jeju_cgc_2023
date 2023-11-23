@@ -19,5 +19,6 @@ urlpatterns = [
     path("broccoli_seogwipo", views.sbroccoli, name="sbroccoli"),
     path("radish_seogwipo", views.sradish, name="sradish"),
 
-    path("crop_market_data_view", views.crop_market_data_view, name="crop-market-data"),
+    path("market_data_list", views.market_data_list, name="crop-market-data"),
+    path('get-data/', views.get_data_for_date, name='get-data'),
 ]
