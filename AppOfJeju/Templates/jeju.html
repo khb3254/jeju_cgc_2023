@@ -39,7 +39,7 @@
 
     <div id="layoutSidenav_content">
     <main>
-        <div class="container">
+        <main class="container">
             <div class="row row-cols-2 row-cols-lg-5">
                 <div class="col-l-2 col-md-5">
                     <div class="card bg-primary text-white mb-4">
@@ -87,13 +87,16 @@
                     </div>
                 </div>
             </div>
-            
-
-{% include "jeju_body.html" %}
-<div class="container">
-    {% include "calender.html" %}
-</div>
-{% include "footer.html" %}
+                <br><br>
+                {% include "jeju_body.html" %}
+                <br><br>
+                <center>
+                    <p><h2>제주시 일별 금액 예측표</h2></p>
+                </center>
+                <!-- 캘린더 -->
+                {% include "calender.html" %}
+                {% include "footer.html" %}
+            </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="static/detail_static/js/scripts.js"></script>
         <script src="static/detail_static/js/calender.js"></script>
