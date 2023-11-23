@@ -67,3 +67,45 @@ def memo(request):
 def crop_market_data_view(request):
     data = CropMarketData.objects.all()
     return render(request, 'calender.html', {'data':data})
+
+def BC_jeju(request):
+    bc = Jeju.objects.all()
+    return render(request, "main/jeju/BC_jeju.html", {"bc": bc} )
+
+def CB_jeju(request):
+    cb = Jeju.objects.all()
+    return render(request, "main/jeju/CB_jeju.html", {"cb": cb} )
+
+def CR_jeju(request):
+    cr = Jeju.objects.all()
+    return render(request, "main/jeju/CR_jeju.html", {"cr": cr} )
+
+def RD_jeju(request):
+    rd = Jeju.objects.all()
+    return render(request, "main/jeju/RD_jeju.html", {"rd": rd} )
+
+def TG_jeju(request):
+    tg = Jeju.objects.all()
+    return render(request, "main/jeju/TG_jeju.html", {"tg": tg} )
+
+
+
+def BC_seogwipo(request):
+    bc_s = Jeju.objects.all()
+    return render(request, "main/seogwipo/BC_seogwipo.html", {"bc_s": bc_s} )
+
+def CB_seogwipo(request):
+    cb_s = Jeju.objects.all()
+    return render(request, "main/seogwipo/CB_seogwipo.html", {"cb_s": cb_s} )
+
+def CR_seogwipo(request):
+    cr_s = Jeju.objects.all()
+    return render(request, "main/seogwipo/CR_seogwipo.html", {"cr_s": cr_s} )
+
+def RD_seogwipo(request):
+    rd_s = Jeju.objects.all()
+    return render(request, "main/seogwipo/RD_seogwipo.html", {"rd_s": rd_s} )
+
+def TG_seogwipo(request):
+    tg_s = Jeju.objects.all()
+    return render(request, "main/seogwipo/TG_seogwipo.html", {"tg_s": tg_s} )
