@@ -7,6 +7,11 @@ def main_page(request):
     main_page = Jeju.objects.all()
     return render(request, "main.html", {"main_page": main_page} )
 
+def welcome(request):
+    welcome = Jeju.objects.all()
+    return render(request, "welcome.html", {"welcome": welcome} )
+
+
 def jeju(request):
     jeju = Jeju.objects.all()
     return render(request, "jeju.html", {"jeju": jeju} )
@@ -61,6 +66,7 @@ def sradish(request):
 def memo(request):
     memo = Jeju.objects.all()
     return render(request, "memo.html", {"memo": memo} )
+
 
 
 # Create your views here.
