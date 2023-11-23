@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
     path("", views.main_page, name="main"),
+    path("welcome", views.welcome, name="welcome"),
     path("jeju", views.jeju, name="jeju"),
     path("seogwipo", views.seogwipo, name="seoqwipo"),
     path("memo",views.memo, name="memo"),
@@ -18,6 +19,7 @@ urlpatterns = [
     path("mandarin_seogwipo", views.smandarin, name="smandarin"),
     path("broccoli_seogwipo", views.sbroccoli, name="sbroccoli"),
     path("radish_seogwipo", views.sradish, name="sradish"),
+
 
     path("crop_market_data_view", views.crop_market_data_view, name="crop-market-data"),
 ]
