@@ -33,5 +33,6 @@ urlpatterns = [
     path("TG_seogwipo", views.TG_seogwipo, name="tg_sw"),
 
 
-    path("crop_market_data_view", views.crop_market_data_view, name="crop-market-data"),
+    path("market_data_list", views.market_data_list, name="crop-market-data"),
+    path('get-data/', views.get_data_for_date, name='get-data'),
 ]
