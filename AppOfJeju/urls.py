@@ -20,6 +20,18 @@ urlpatterns = [
     path("broccoli_seogwipo", views.sbroccoli, name="sbroccoli"),
     path("radish_seogwipo", views.sradish, name="sradish"),
 
+    path("BC_jeju", views.BC_jeju, name="bc"),
+    path("CB_jeju", views.CB_jeju, name="cb"),
+    path("CR_jeju", views.CR_jeju, name="cr"),
+    path("RD_jeju", views.RD_jeju, name="rd"),
+    path("TG_jeju", views.TG_jeju, name="tg"),
+
+    path("BC_seogwipo", views.BC_seogwipo, name="bc_sw"),
+    path("CB_seogwipo", views.CB_seogwipo, name="cb_sw"),
+    path("CR_seogwipo", views.CR_seogwipo, name="cr_sw"),
+    path("RD_seogwipo", views.RD_seogwipo, name="rd_sw"),
+    path("TG_seogwipo", views.TG_seogwipo, name="tg_sw"),
+
 
     path("crop_market_data_view", views.crop_market_data_view, name="crop-market-data"),
 ]

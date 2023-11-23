@@ -45,7 +45,7 @@
                     <div class="card bg-primary text-white mb-4">
                         <div class="card-body">당근</div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="{% url 'jcarrot' %}">View Details</a>
+                            <a class="small text-white stretched-link" href="{% url 'cr' %}">View Details</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                     <div class="card bg-warning text-white mb-4">
                         <div class="card-body">감귤</div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="{% url 'jmandarin' %} ">View Details</a>
+                            <a class="small text-white stretched-link" href="{% url 'tg' %} ">View Details</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                     <div class="card bg-success text-white mb-4">
                         <div class="card-body">브로콜리</div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="{% url 'jbroccoli' %}">View Details</a>
+                            <a class="small text-white stretched-link" href="{% url 'bc' %}">View Details</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                     <div class="card bg-danger text-white mb-4">
                         <div class="card-body">양배추</div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="{% url 'jcabbage' %}">View Details</a>
+                            <a class="small text-white stretched-link" href="{% url 'cb' %}">View Details</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
@@ -81,12 +81,13 @@
                     <div class="card bg-secondary text-white mb-4">
                         <div class="card-body">무</div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="{% url 'jradish' %}">View Details</a>
+                            <a class="small text-white stretched-link" href="{% url 'rd' %}">View Details</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
                 </div>
             </div>
+
                 <br><br>
                 {% include "jeju_body.html" %}
                 <br><br>
@@ -97,6 +98,7 @@
                 {% include "calender.html" %}
                 {% include "footer.html" %}
             </main>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="static/detail_static/js/scripts.js"></script>
         <script src="static/detail_static/js/calender.js"></script>
