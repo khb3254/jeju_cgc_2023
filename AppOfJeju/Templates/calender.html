@@ -25,12 +25,12 @@
                 <div class="day">토</div>
             </div>
             <div class="dates">
-                {% for date in dates %}
-                    <!-- date-itm 객체에서 year, month, day 속성을 사용해 data-date를 설정 -->
-                    <div class="date" data-date="{{ date.year }}-{{ date.month|stringformat:'02d' }}-{{ date.day|stringformat:'02d' }}">
-                        {{ date.day }}
-                    </div>
-                {% endfor %}
+<!--                {% for date in dates %}-->
+<!--                    &lt;!&ndash; date-itm 객체에서 year, month, day 속성을 사용해 data-date를 설정 &ndash;&gt;-->
+<!--                    <div class="date" data-date="{{ date.year }}-{{ date.month|stringformat:'02d' }}-{{ date.day|stringformat:'02d' }}">-->
+<!--                        {{ date.day }}-->
+<!--                    </div>-->
+<!--                {% endfor %}-->
             </div>
         </div>
         <!-- 특상품 금액예측 창 -->
@@ -41,7 +41,7 @@
                     <div class="container text-center">
                         <div class="row">
                             <div class="col">
-                                <h2>특산품 예상 금액 </h2>
+                                <h3>특산품 예상 금액 </h3>
                             </div>
                         </div>
                     </div>
@@ -50,8 +50,10 @@
                     <div class="resv-event">
                         <div class="card mb-4">
                             <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                특산품 예상 금액
+                                <!-- 팝업창에 클릭한 날짜까지 나오도록 하려고 추가한 코드 -->
+                                <div class="selected-date">
+                                    <h4><i class="fas fa-table me-1"></i>  <span id="selected-date-span"></span></h4>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
@@ -64,6 +66,12 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    <tr>
+                                        <td>당근</td>
+                                        <td>토끼나라</td>
+                                        <td>2000원</td>
+                                        <td>오늘날짜</td>
+                                    </tr>
                                     {% for item in data %}
                                     <tr>
                                         <td>{{ item.crop_type }}</td>
