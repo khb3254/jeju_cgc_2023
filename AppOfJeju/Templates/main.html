@@ -11,41 +11,54 @@
     <link href="static/welcome_static/welcome.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/cfeddde540.js" crossorigin="anonymous"></script>
-    <META http-equiv="refresh" content="5.5; url=http://127.0.0.1:8080/welcome">
+
+    <META http-equiv="refresh" content="5.5; url={% url 'welcome' %}">
     <META HTTP-EQUIV="Page-Enter" ConTENT="BlendTrans(Duration=0.3)">
     <META HTTP-EQUIV="Page-exit" ConTENT="BlendTrans(Duration=0.3)">
 
     <style>
       :root {
         --ti-cursor-margin-left: 0.1em; //
-        --ti-cursor-color: dodgerblue; //
+        --ti-cursor-color: orange; //
       }
       body {
-        height: 100vh;
+        height: 20;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: #E6F8E0;
-        color: #088A29;
+        background: #FAFAFA;
+        color: #4B8A08;
         font-size: 3rem;
         font-family: 'Roboto', sans-serif;
       }
       h1 {
         margin-bottom: 0px;
       }
+
+
     </style>
   </head>
   <body>
-    <h1 id="title">Get jeju!</h1>
+
+    <h1 id="multipleStrings"></h1>
+
+
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         new TypeIt('#title') //
-          .pause(1000)
+          .pause(950)
           .delete(5, { delay: 1100 })
           .type('Seogwipo!')
           .go();
       });
+
+
+      new TypeIt("#multipleStrings", {
+      strings: ["Get jeju", "Get Seogwipo!"],
+      speed: 80,
+      waitUntilVisible: true,
+    }).go();
     </script>
     <br>
   </body>
