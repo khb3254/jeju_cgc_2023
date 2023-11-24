@@ -2,13 +2,35 @@ const resvTab = document.querySelector('.resv-wrapper');
 const exitBtn = document.querySelector('.resv-close');
 exitBtn.addEventListener('click', ()=>{resvTab.classList.remove('open');});
 
+// 달력의 모든 날짜 요소에 대한 클릭 이벤트 리스너 추가
+document.querySelectorAll('.date, .date-itm').forEach(function(dateElement) {
+    dateElement.addEventListener('click', function(event) {
+    // 선택된 날짜를 저장
+    var year = document.querySelector('.year');
+    var month = document.querySelector('.month');
+    var date = event.target.textContent.trim().slice(0, 2);
+    // 선택된 날짜를 특산품 예상 금액 섹션에 표시
+    document.getElementById('selected-date-span').textContent = `${year.textContent}년 ${month.textContent}월 ${date}일`;
+    });
+});
+
+
+// querySelector를 사용하여 특정 클래스를 가진 모든 요소에 대해 이벤트 리스너를 추가합니다.
+document.querySelectorAll('.date-itm').forEach(function(element) {
+  element.addEventListener('click', function(event) {
+
+    // 이후의 코드에서 content 변수를 사용하여 필요한 작업을 수행합니다.
+  });
+});
+
+
 
 // 날짜별로 이벤트 등록용 함수 및 변수
 const selDate = []
 const dateFunc = ()=>{
-    const year = document.querySelector('.year');
-    const month = document.querySelector('.month');
-    const dates = document.querySelectorAll('.date');
+    var year = document.querySelector('.year');
+    var month = document.querySelector('.month');
+    var dates = document.querySelectorAll('.date');
     dates.forEach((i)=>{
         i.addEventListener('click', ()=>{
             if(i.classList.contains('other') || i.classList.contains('selected')){
@@ -27,14 +49,12 @@ const dateFunc = ()=>{
                 resvTab.classList.add('open');
             }
         })
-//        i.removeEventListener('click', dateClickHandler); // 기존 이벤트 리스터 제거
-//        i.addEventListener('click', dateClickHandler); // 새 이벤트 리스터 추가
     });
 };
 
 function dateClickHandler(event) {
     // 'closest' 함수를 사용하여 클릭된 요소의 상위에 있는 '.date' 클래스 요소를 찾습니다.
-    let dateElement = event.target.closest('.date');
+    var dateElement = event.target.closest('.date');
 
     // 클릭된 요소가 .date 클래스를 가진 요소가 아니면 함수를 종료합니다.
     if (!dateElement) {
@@ -44,7 +64,7 @@ function dateClickHandler(event) {
 
     // 선택된 날짜 데이터가 있는지 확인합니다.
     // let selectedDate = dateElement.dataset.date;
-    let selectedDate = (dateElement.textContent).trim();
+    var selectedDate = dateElement.textContent.trim();
     if (!selectedDate) {
         console.error(dateElement);
         console.error("The selected date is undefined or does not have a data-date attribute.");
