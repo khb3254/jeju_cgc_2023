@@ -23,5 +23,5 @@ class PredictionData(models.Model):
     supplier = models.CharField(max_length=20, blank=True)
     origin = models.CharField(max_length=20, blank=True)
     crop_date = models.DateField(null=False)
-    crop_price = models.FloatField(null=False)
+    crop_price = models.IntegerField(null=False)
     ai_model = models.CharField(max_length=30, null=False, blank=False)

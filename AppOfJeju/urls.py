@@ -34,5 +34,17 @@ urlpatterns = [
 
 
     path("market_data_list", views.market_data_list, name="crop-market-data"),
-    path('get-data/', views.get_data_for_date, name='get-data'),
+    # AJAX 요청을 위한 URL 패턴 추가
+    path("jeju/", views.get_predictions, name="get_predictions_jeju"),
+    path("BC_jeju/", views.get_predictions, name="bc_get_predictions_jeju"),
+    path("CB_jeju/", views.get_predictions, name="cb_get_predictions_jeju"),
+    path("CR_jeju/", views.get_predictions, name="cr_get_predictions_jeju"),
+    path("RD_jeju/", views.get_predictions, name="rd_get_predictions_jeju"),
+    path("TG_jeju/", views.get_predictions, name="tg_get_predictions_jeju"),
+    path("seogwipo/", views.get_predictions, name="get_predictions_seogwipo"),
+    path("BC_seogwipo/", views.get_predictions, name="bc_get_predictions_seogwipo"),
+    path("CB_seogwipo/", views.get_predictions, name="cb_get_predictions_seogwipo"),
+    path("CR_seogwipo/", views.get_predictions, name="cr_get_predictions_seogwipo"),
+    path("RD_seogwipo/", views.get_predictions, name="rd_get_predictions_seogwipo"),
+    path("TG_seogwipo/", views.get_predictions, name="tg_get_predictions_seogwipo"),
 ]
