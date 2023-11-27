@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from.models import Jeju, CropMarketData, PredictionData
+from.models import Jeju, CropMarketData, PredictionData, RetailPredictionData
 from django.template.loader import render_to_string
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.http import require_http_methods
@@ -117,43 +117,54 @@ def market_data_list(request):
     market_data = CropMarketData.objects.all()
     return render(request, 'calender.html', {'market_data':market_data})
 
-def get_predictions(request):
-
-    logger.debug( request.GET.get('date', None))
-
+def get_predictions_whole(request):
     # 요청으로부터 'date'를 가져옵니다
-    selected_date =  request.GET.get('date', None)
-
-
-
+    selected_date = request.GET.get('date', None)
     data = []
     if selected_date:
         try:
+            queryset = PredictionData.objects.filter(crop_date=selected_date, crop_price__gt=0, origin='J')
             # 날짜에 해당하는 데이터 검색
-            if 'BC_jeju' in request.path: # BC_jeju 페이지에서 crop_type을 BC로 필터링
-                data = PredictionData.objects.filter(crop_date=selected_date).filter(crop_type='BC').filter(origin='J').filter(ai_model='RandomForest').order_by('supplier').values()
-            elif 'CB_jeju' in request.path: # CB_jeju 페이지에서 crop_type을 BC로 필터링
-                data = PredictionData.objects.filter(crop_date=selected_date).filter(crop_type='CB').filter(origin='J').filter(ai_model='LSTM').order_by('supplier').values()
-            elif 'CR_jeju' in request.path:  # CR_jeju 페이지에서 crop_type을 CR로 필터링
-                data = PredictionData.objects.filter(crop_date=selected_date).filter(crop_type='CR').filter(origin='J').filter(ai_model='RandomForest').order_by('supplier').values()
-            elif 'RD_jeju' in request.path:  # RD_jeju 페이지에서 crop_type을 RD로 필터링
-                data = PredictionData.objects.filter(crop_date=selected_date).filter(crop_type='RD').filter(origin='J').filter(ai_model='RandomForest').order_by('supplier').alues()
-            elif 'TG_jeju' in request.path:  # TG_jeju 페이지에서 crop_type을 TG로 필터링
-                data = PredictionData.objects.filter(crop_date=selected_date).filter(crop_type='TG').filter(origin='J').filter(ai_model='LSTM').order_by('supplier').values()
-            elif 'BC_seogwipo' in request.path: # BC_jeju 페이지에서 crop_type을 BC로 필터링
-                data = PredictionData.objects.filter(crop_date=selected_date).filter(crop_type='BC').filter(origin='S').values()
-            elif 'CB_seogwipo' in request.path: # CB_jeju 페이지에서 crop_type을 BC로 필터링
-                data = PredictionData.objects.filter(crop_date=selected_date).filter(crop_type='CB').filter(origin='S').values()
-            elif 'CR_seogwipo' in request.path:  # CR_jeju 페이지에서 crop_type을 CR로 필터링
-                data = PredictionData.objects.filter(crop_date=selected_date).filter(crop_type='CR').filter(origin='S').values()
-            elif 'RD_seogwipo' in request.path:  # RD_jeju 페이지에서 crop_type을 RD로 필터링
-                data = PredictionData.objects.filter(crop_date=selected_date).filter(crop_type='RD').filter(origin='S').values()
-            elif 'TG_seogwipo' in request.path:  # TG_jeju 페이지에서 crop_type을 TG로 필터링
-                data = PredictionData.objects.filter(crop_date=selected_date).filter(crop_type='TG').filter(origin='S').values()
-            elif 'jeju' in request.path:
-                data = PredictionData.objects.filter(crop_date=selected_date).filter(origin='J').values()
-            elif 'seogwipo' in request.path:
-                data = PredictionData.objects.filter(crop_date=selected_date).filter(origin='S').values()
+            if 'BC_whole' in request.path: # BC_jeju 페이지에서 crop_type을 BC로 필터링
+                data = queryset.filter(crop_type='BC').filter(ai_model='RandomForest').values()
+            elif 'CB_whole' in request.path: # CB_jeju 페이지에서 crop_type을 BC로 필터링
+                data = queryset.filter(crop_type='CB').filter(ai_model='LSTM').values()
+            elif 'CR_whole' in request.path:  # CR_jeju 페이지에서 crop_type을 CR로 필터링
+                data = queryset.filter(crop_type='CR').filter(ai_model='RandomForest').values()
+            elif 'RD_whole' in request.path:  # RD_jeju 페이지에서 crop_type을 RD로 필터링
+                data = queryset.filter(crop_type='RD').filter(ai_model='RandomForest').values()
+            elif 'TG_whole' in request.path:  # TG_jeju 페이지에서 crop_type을 TG로 필터링
+                data = queryset.filter(crop_type='TG').filter(ai_model='LSTM').values()
+            elif 'whole' in request.path:
+                data = queryset.filter(crop_type='CR').filter(ai_model='RandomForest').values()
+            # 데이터를 JSON으로 반환
+            return JsonResponse(list(data), safe=False)
+
+        except ValueError:
+            # 'date'가 제공되지 않았을 경우를 처리합니다
+            return JsonResponse({'error': 'Date not provided'}, status=400)
+
+def get_predictions_retail(request):
+
+    # 요청으로부터 'date'를 가져옵니다
+    selected_date = request.GET.get('date', None)
+    data = []
+    if selected_date:
+        try:
+            queryset = RetailPredictionData.objects.filter(crop_date=selected_date, crop_price__gt=0, origin='J')
+            # 날짜에 해당하는 데이터 검색
+            if 'BC_whole' in request.path: # BC_jeju 페이지에서 crop_type을 BC로 필터링
+                data = queryset.filter(crop_type='BC').filter(ai_model='RandomForest').values()
+            elif 'CB_whole' in request.path: # CB_jeju 페이지에서 crop_type을 BC로 필터링
+                data = queryset.filter(crop_type='CB').filter(ai_model='LSTM').values()
+            elif 'CR_whole' in request.path:  # CR_jeju 페이지에서 crop_type을 CR로 필터링
+                data = queryset.filter(crop_type='CR').filter(ai_model='RandomForest').values()
+            elif 'RD_whole' in request.path:  # RD_jeju 페이지에서 crop_type을 RD로 필터링
+                data = queryset.filter(crop_type='RD').filter(ai_model='RandomForest').values()
+            elif 'TG_whole' in request.path:  # TG_jeju 페이지에서 crop_type을 TG로 필터링
+                data = queryset.filter(crop_type='TG').filter(ai_model='LSTM').values()
+            elif 'whole' in request.path:
+                data = queryset.filter(crop_type='CR').filter(ai_model='RandomForest').values()
             # 데이터를 JSON으로 반환
             return JsonResponse(list(data), safe=False)
 

@@ -54,21 +54,17 @@
                                 <table id="datatablesSimple">
                                     <thead>
                                     <tr>
-                                        <th>Crop</th>
                                         <th>Company</th>
                                         <th>Price</th>
                                         <th>Date</th>
-                                        <th>AI-model</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                         {% for item in data %}
                                         <tr>
-                                            <td>{{ item.crop_type }}</td>
                                             <td>{{ item.supplier }}</td>
                                             <td>{{ item.crop_price|floatformat:"0" }}</td>
                                             <td>{{ item.crop_date }}</td>
-                                            <td>{{ item.ai_model}}</td>
                                         </tr>
                                         {% endfor %}
                                     </tbody>
