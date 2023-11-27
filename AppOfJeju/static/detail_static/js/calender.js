@@ -17,8 +17,19 @@ function sendGetRequestWithDate(date, type) {
         .catch(error => console.error('Error:', error));
 }
 
+
 // 페이지를 업데이트하는 함수
 function updatePageWithData(data) {
+
+    const companyNames = {
+        'A': '행복농원',
+        'B': '예린농산',
+        'C': '다솜농장',
+        'D': '하늘농원',
+        'E': '미래농산',
+        'F': '땅과바다'
+    };
+
     // 업데이트할 테이블 또는 페이지 부분을 찾습니다
     const tableBody = document.querySelector('.datatable-table tbody');
     tableBody.style.visibility = 'visible';
@@ -27,12 +38,12 @@ function updatePageWithData(data) {
 
     // 데이터를 반복하면서 테이블 바디에 행을 추가합니다
     data.forEach(item => {
+        const companyName = companyNames[item.supplier];
+        const formattedPrice = item.crop_price.toLocaleString();
         const row = `<tr>
-                        <td>${item.crop_type}</td>
-                        <td>${item.supplier}</td>
-                        <td>${item.crop_price}</td>
+                        <td>${companyName}</td>
+                        <td>${formattedPrice}원</td>
                         <td>${item.crop_date}</td>
-                        <td>${item.ai_model}</td>
                      </tr>`;
         tableBody.innerHTML += row;
     });
