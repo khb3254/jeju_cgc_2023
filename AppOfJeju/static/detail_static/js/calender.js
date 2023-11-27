@@ -1,30 +1,47 @@
+// 원본 코드
 const resvTab = document.querySelector('.resv-wrapper');
 const exitBtn = document.querySelector('.resv-close');
 exitBtn.addEventListener('click', ()=>{resvTab.classList.remove('open');});
 
-// 달력의 모든 날짜 요소에 대한 클릭 이벤트 리스너 추가
-document.querySelectorAll('.date, .date-itm').forEach(function(dateElement) {
-    dateElement.addEventListener('click', function(event) {
-    // 선택된 날짜를 저장
-    var year = document.querySelector('.year');
-    var month = document.querySelector('.month');
-    var date = event.target.textContent.trim().slice(0, 2);
-    // 선택된 날짜를 특산품 예상 금액 섹션에 표시
-    document.getElementById('selected-date-span').textContent = `${year.textContent}년 ${month.textContent}월 ${date}일`;
+
+
+// 서버에 GET 요청을 보내는 함수
+// 특정 날짜, 농산물 품목이 무엇인지 전달
+function sendGetRequestWithDate(date, type) {
+    fetch(`${type}/?date=${date}`)
+        .then(response => response.json())
+        .then(data => {
+             // 서버로부터 받은 데이터를 처리합니다.
+            updatePageWithData(data); // HTML을 업데이트하는 함수
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+// 페이지를 업데이트하는 함수
+function updatePageWithData(data) {
+    // 업데이트할 테이블 또는 페이지 부분을 찾습니다
+    const tableBody = document.querySelector('.datatable-table tbody');
+    tableBody.style.visibility = 'visible';
+
+    tableBody.innerHTML = ''; // 기존 테이블 데이터를 지웁니다
+
+    // 데이터를 반복하면서 테이블 바디에 행을 추가합니다
+    data.forEach(item => {
+        const row = `<tr>
+                        <td>${item.crop_type}</td>
+                        <td>${item.supplier}</td>
+                        <td>${item.crop_price}</td>
+                        <td>${item.crop_date}</td>
+                        <td>${item.ai_model}</td>
+                     </tr>`;
+        tableBody.innerHTML += row;
     });
-});
-
-
-// querySelector를 사용하여 특정 클래스를 가진 모든 요소에 대해 이벤트 리스너를 추가합니다.
-document.querySelectorAll('.date-itm').forEach(function(element) {
-  element.addEventListener('click', function(event) {
-
-    // 이후의 코드에서 content 변수를 사용하여 필요한 작업을 수행합니다.
-  });
-});
+}
 
 
 
+
+// 원본 코드
 // 날짜별로 이벤트 등록용 함수 및 변수
 const selDate = []
 const dateFunc = ()=>{
@@ -52,50 +69,16 @@ const dateFunc = ()=>{
     });
 };
 
-function dateClickHandler(event) {
-    // 'closest' 함수를 사용하여 클릭된 요소의 상위에 있는 '.date' 클래스 요소를 찾습니다.
-    var dateElement = event.target.closest('.date');
 
-    // 클릭된 요소가 .date 클래스를 가진 요소가 아니면 함수를 종료합니다.
-    if (!dateElement) {
-        console.error("Clicked element does not have a .date class.");
-        return;
-    }
-
-    // 선택된 날짜 데이터가 있는지 확인합니다.
-    // let selectedDate = dateElement.dataset.date;
-    var selectedDate = dateElement.textContent.trim();
-    if (!selectedDate) {
-        console.error(dateElement);
-        console.error("The selected date is undefined or does not have a data-date attribute.");
-    }
-    // AJAX 요청을 생성하고 설정하기
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', '/get-data/?date=' + selectedDate, true);
-    xhr.onload = function() {
-        if (this.status === 200) {
-            // 서버로부터 반환된 데이터로 UI 업데이트
-            document.querySelector('#datatablesSimple tbody').innerHTML = this.responseText;
-        } else {
-            // 에러 처리
-            console.error('An error occurred during your request: ' + this.status + ' ' + this.statusText);
-            return;
-        }
-    };
-    xhr.onerror = function() {
-        // 요청 자체에 문제가 있을 경우의 에러 처리
-        console.error('The request failed');
-    };
-    // 요청 보내기
-    xhr.send();
-};
-
+// 원본 코드
 // 초기화 함수
 const reset = ()=>{
     selDate.length=0;
     dateFunc(); // dateFunc 함수를 호출하여 이벤트 리스너를 추가합니다.
 };
 
+
+// 원본 코드
 // 로드시 Nav 버튼들 이벤트 등록 및 초기화
 window.onload=()=>{
     const navBtn = document.querySelectorAll('.nav-btn');
@@ -108,5 +91,77 @@ window.onload=()=>{
             inf.addEventListener('click', ()=>{nextMonth(); reset();});
         }
     });
+
     reset();
 };
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // 모든 초기화 코드를 여기에 넣으세요
+    // 예를 들면, 이벤트 리스너를 추가하는 함수 등
+
+
+        // 새 코드
+        // 날짜 요소에 이벤트 리스너를 추가하는 함수
+        function addEventListenersToDateElements() {
+            document.querySelectorAll('.date, .date-itm').forEach(function(dateElement) {
+                dateElement.addEventListener('click', function(event) {
+                    // 선택된 날짜를 저장
+                    var year = document.querySelector('.year').textContent;
+                    var month = document.querySelector('.month').textContent;
+                    var date = event.target.textContent.trim().slice(0, 2);
+                    var type = window.location.pathname;
+
+                    // 선택된 날짜를 특산품 예상 금액 섹션에 표시
+                    document.getElementById('selected-date-span').textContent = `${year}년 ${month}월 ${date}일`;
+
+                    // 월과 일이 한 자리 숫자일 경우 앞에 '0'을 추가합니다.
+                    if (month.length === 1) {
+                        month = '0' + month;
+                    }
+                    if (date.length === 1) {
+                        date = '0' + date;
+                    }
+                    // YYYY-MM-DD 형식으로 날짜를 결합합니다.
+                    var selectedDate = `${year}-${month.padStart(2, '0')}-${date.padStart(2, '0')}`;
+                    // 서버에 GET 요청을 보내는 함수 호출
+                    sendGetRequestWithDate(selectedDate, type);
+                });
+            });
+        }
+
+
+    reset();
+    addEventListenersToDateElements();
+
+    // MutationObserver를 설정하는 코드도 여기에 포함될 수 있습니다.
+    // DOM 변화를 관찰하는 MutationObserver 초기화
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList') {
+                // 달력의 DOM에 변화가 감지될 때마다 이벤트 리스너를 다시 추가
+                addEventListenersToDateElements();
+            }
+        });
+    });
+
+    // 관찰 대상 요소 및 관찰 설정
+    var targetNode = document.querySelector('.calendar'); // 달력 요소의 부모 요소를 지정
+    var config = { childList: true, subtree: true };
+
+    // 관찰 시작
+    observer.observe(targetNode, config);
+
+    // 다른 모든 함수들도 이 안에서 호출할 수 있습니다.
+    // 예를 들어, 나비게이션 버튼 이벤트를 등록하는 코드 등
+    const navBtn = document.querySelectorAll('.nav-btn');
+    navBtn.forEach(inf => {
+        if (inf.classList.contains('go-prev')) {
+            inf.addEventListener('click', () => { prevMonth(); reset(); });
+        } else if (inf.classList.contains('go-today')) {
+            inf.addEventListener('click', () => { goToday(); reset(); });
+        } else if (inf.classList.contains('go-next')) {
+            inf.addEventListener('click', () => { nextMonth(); reset(); });
+        }
+    });
+});
