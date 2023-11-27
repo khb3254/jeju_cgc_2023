@@ -4,8 +4,8 @@ from . import views
 urlpatterns = [
     path("", views.main_page, name="main"),
     path("welcome", views.welcome, name="welcome"),
-    path("jeju", views.jeju, name="jeju"),
-    path("seogwipo", views.seogwipo, name="seoqwipo"),
+    path("retail", views.jeju, name="jeju"),
+    path("whole", views.seogwipo, name="seoqwipo"),
     path("memo",views.memo, name="memo"),
 
     path("carrot_jeju", views.jcarrot, name="jcarrot"),
@@ -20,17 +20,17 @@ urlpatterns = [
     path("broccoli_seogwipo", views.sbroccoli, name="sbroccoli"),
     path("radish_seogwipo", views.sradish, name="sradish"),
 
-    path("BC_jeju", views.BC_jeju, name="bc"),
-    path("CB_jeju", views.CB_jeju, name="cb"),
-    path("CR_jeju", views.CR_jeju, name="cr"),
-    path("RD_jeju", views.RD_jeju, name="rd"),
-    path("TG_jeju", views.TG_jeju, name="tg"),
+    path("BC_retail", views.BC_jeju, name="bc"),
+    path("CB_retail", views.CB_jeju, name="cb"),
+    path("CR_retail", views.CR_jeju, name="cr"),
+    path("RD_retail", views.RD_jeju, name="rd"),
+    path("TG_retail", views.TG_jeju, name="tg"),
 
-    path("BC_seogwipo", views.BC_seogwipo, name="bc_sw"),
-    path("CB_seogwipo", views.CB_seogwipo, name="cb_sw"),
-    path("CR_seogwipo", views.CR_seogwipo, name="cr_sw"),
-    path("RD_seogwipo", views.RD_seogwipo, name="rd_sw"),
-    path("TG_seogwipo", views.TG_seogwipo, name="tg_sw"),
+    path("BC_whole", views.BC_seogwipo, name="bc_sw"),
+    path("CB_whole", views.CB_seogwipo, name="cb_sw"),
+    path("CR_whole", views.CR_seogwipo, name="cr_sw"),
+    path("RD_whole", views.RD_seogwipo, name="rd_sw"),
+    path("TG_whole", views.TG_seogwipo, name="tg_sw"),
 
 
     path("market_data_list", views.market_data_list, name="crop-market-data"),
