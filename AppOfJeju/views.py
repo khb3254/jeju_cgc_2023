@@ -123,7 +123,7 @@ def get_predictions_whole(request):
     data = []
     if selected_date:
         try:
-            queryset = PredictionData.objects.filter(crop_date=selected_date, crop_price__gt=0, origin='J')
+            queryset = PredictionData.objects.filter(crop_date=selected_date, crop_price__gt=100, origin='J')
             # 날짜에 해당하는 데이터 검색
             if 'BC_whole' in request.path: # BC_jeju 페이지에서 crop_type을 BC로 필터링
                 data = queryset.filter(crop_type='BC').filter(ai_model='RandomForest').values()
@@ -151,20 +151,20 @@ def get_predictions_retail(request):
     data = []
     if selected_date:
         try:
-            queryset = RetailPredictionData.objects.filter(crop_date=selected_date, crop_price__gt=0, origin='J')
+            queryset = RetailPredictionData.objects.filter(crop_date=selected_date, crop_price__gt=100)
             # 날짜에 해당하는 데이터 검색
-            if 'BC_whole' in request.path: # BC_jeju 페이지에서 crop_type을 BC로 필터링
-                data = queryset.filter(crop_type='BC').filter(ai_model='RandomForest').values()
-            elif 'CB_whole' in request.path: # CB_jeju 페이지에서 crop_type을 BC로 필터링
-                data = queryset.filter(crop_type='CB').filter(ai_model='LSTM').values()
-            elif 'CR_whole' in request.path:  # CR_jeju 페이지에서 crop_type을 CR로 필터링
-                data = queryset.filter(crop_type='CR').filter(ai_model='RandomForest').values()
-            elif 'RD_whole' in request.path:  # RD_jeju 페이지에서 crop_type을 RD로 필터링
-                data = queryset.filter(crop_type='RD').filter(ai_model='RandomForest').values()
-            elif 'TG_whole' in request.path:  # TG_jeju 페이지에서 crop_type을 TG로 필터링
-                data = queryset.filter(crop_type='TG').filter(ai_model='LSTM').values()
-            elif 'whole' in request.path:
-                data = queryset.filter(crop_type='CR').filter(ai_model='RandomForest').values()
+            if 'BC_retail' in request.path: # BC_jeju 페이지에서 crop_type을 BC로 필터링
+                data = queryset.filter(crop_type='BC').values()
+            elif 'CB_retail' in request.path: # CB_jeju 페이지에서 crop_type을 BC로 필터링
+                data = queryset.filter(crop_type='CB').values()
+            elif 'CR_retail' in request.path:  # CR_jeju 페이지에서 crop_type을 CR로 필터링
+                data = queryset.filter(crop_type='CR').values()
+            elif 'RD_retail' in request.path:  # RD_jeju 페이지에서 crop_type을 RD로 필터링
+                data = queryset.filter(crop_type='RD').values()
+            elif 'TG_retail' in request.path:  # TG_jeju 페이지에서 crop_type을 TG로 필터링
+                data = queryset.filter(crop_type='TG').values()
+            elif 'retail' in request.path:
+                data = queryset.filter(crop_type='CR').values()
             # 데이터를 JSON으로 반환
             return JsonResponse(list(data), safe=False)
 

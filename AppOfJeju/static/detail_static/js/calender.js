@@ -27,7 +27,8 @@ function updatePageWithData(data) {
         'C': '다솜농장',
         'D': '하늘농원',
         'E': '미래농산',
-        'F': '땅과바다'
+        'F': '땅과바다',
+        '': '시장가격'
     };
 
     // 업데이트할 테이블 또는 페이지 부분을 찾습니다
@@ -38,7 +39,7 @@ function updatePageWithData(data) {
 
     // 데이터를 반복하면서 테이블 바디에 행을 추가합니다
     data.forEach(item => {
-        const companyName = companyNames[item.supplier];
+        const companyName = companyNames[item.supplier] || '시장가격';
         const formattedPrice = item.crop_price.toLocaleString();
         const row = `<tr>
                         <td>${companyName}</td>
@@ -86,24 +87,6 @@ const dateFunc = ()=>{
 const reset = ()=>{
     selDate.length=0;
     dateFunc(); // dateFunc 함수를 호출하여 이벤트 리스너를 추가합니다.
-};
-
-
-// 원본 코드
-// 로드시 Nav 버튼들 이벤트 등록 및 초기화
-window.onload=()=>{
-    const navBtn = document.querySelectorAll('.nav-btn');
-    navBtn.forEach(inf=>{
-        if(inf.classList.contains('go-prev')){
-            inf.addEventListener('click', ()=>{prevMonth(); reset();});
-        }else if(inf.classList.contains('go-today')){
-            inf.addEventListener('click', ()=>{goToday(); reset();});
-        }else if(inf.classList.contains('go-next')){
-            inf.addEventListener('click', ()=>{nextMonth(); reset();});
-        }
-    });
-
-    reset();
 };
 
 

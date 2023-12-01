@@ -1,6 +1,7 @@
 from django.core.management.base import BaseCommand, CommandError
-from AppOfJeju.models import RetailPredictionData
+from AppOfJeju.models import PredictionData
 import csv
+import decimal
 from datetime import datetime
 
 class Command(BaseCommand):
@@ -15,10 +16,12 @@ class Command(BaseCommand):
             reader = csv.DictReader(csvfile)
             for row in reader:
                 crop_date = datetime.strptime(row['date'], '%Y-%m-%d').date()
-                RetailPredictionData.objects.create(
-                    crop_type=row['ID'][:2],
+                PredictionData.objects.create(
+                    crop_type=row['item'],
+                    supplier = row['corporation'],
+                    origin = row['location'],
                     crop_date=crop_date,
-                    crop_price=float(row['answer']) if row['answer'] else None,
-                    ai_model="LSTM"
+                    crop_price=int(decimal.Decimal(row['answer']).quantize(decimal.Decimal('1'), rounding=decimal.ROUND_HALF_UP)) if row['answer'] else None,
+                    ai_model="ExtraTree"
                 )
         self.stdout.write(self.style.SUCCESS('Successfully loaded crop data'))
