@@ -17,5 +17,5 @@
 </p>
 
 
-<img src="도매가 가격 달력 이미지.png">
-<img src="특산품 예상 금액 이미지.png">
+<img src="도매가 가격 달력 이미지.png" alt = "도매가 가격 달력" width = "500" style = "margin-right: 10px;">
+<img src="특산품 예상 금액 이미지.png" width = "300">
