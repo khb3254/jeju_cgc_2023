@@ -24,15 +24,10 @@
 
 
 ## ⚒️ Tools 
-<p>
-<img src="https://img.shields.io/badge/PyCham-forestgreen?style=plastic&logo=PyCham&logoColor=000000"/>
-<img src="https://img.shields.io/badge/Jupyter Notebook-orangered?style=plastic&logo=Jupyter&logoColor=F37626"/>
-<img src="https://img.shields.io/badge/Tableau Public-royalblue?style=plastic&logo=Tableau&logoColor=E97627"/>
-<img src="https://img.shields.io/badge/GitHub-rebeccapurple?style=plastic&logo=GitHub&logoColor=181717"/>
-</p>
+<img src="프레임워크 및 툴.png" width = "1000">
 
 
-  
+
 ## 💻 웹페이지
 <div style="display : flex; align-items : center;">
   <img src="홈페이지 가격 변동 이미지.png" alt = "홈페이지 가격 변동 이미지" width = "1000">
