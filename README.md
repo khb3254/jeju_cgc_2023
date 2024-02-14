@@ -37,8 +37,8 @@
 <div style="display : flex; align-items : center;">
   <img src="홈페이지 가격 변동 이미지.png" alt = "홈페이지 가격 변동 이미지" width = "1000">
   </br>
-  <img src="도매가 가격 달력 이미지.png" alt = "도매가 가격 달력" width = "500" style = "margin-right: 40px;">
-  <img src="특산품 예상 금액 이미지.png" alt = "특산품 예상 금액 이미지" width = "500">
+  <img src="도매가 가격 달력 이미지.png" alt = "도매가 가격 달력" width = "500" style = "margin-right: 10px;">
+  <img src="특산품 예상 금액 이미지.png" alt = "특산품 예상 금액 이미지" width = "400">
 </div>
 
 
