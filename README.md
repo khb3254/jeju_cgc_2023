@@ -1,5 +1,6 @@
 # 🍊JEJU🥕
-사이트 주소 : https://jeju.pythonanywhere.com/welcome
+제주도 특산물 가격 예측 AI
+- 사이트 주소 : https://jeju.pythonanywhere.com/welcome
 
 
 ⚒️ Tools 🔧
@@ -12,3 +13,5 @@
 <img src="https://img.shields.io/badge/GitHub-rebeccapurple?style=flat&logo=GitHub&logoColor=181717"/>
 </p>
 
+
+<img src="C:\Users\user\Desktop\스크린샷 2024-02-14 132258.png">
