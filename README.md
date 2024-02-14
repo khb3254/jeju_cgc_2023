@@ -8,10 +8,10 @@
 
 
 <p>
-<img src="https://img.shields.io/badge/PyCham-forestgreen?style=for-the-badge&logo=PyCham&logoColor=000000"/>
-<img src="https://img.shields.io/badge/Jupyter Notebook-orangered?style=for-the-badge&logo=Jupyter&logoColor=F37626"/>
-<img src="https://img.shields.io/badge/Tableau Public-royalblue?style=for-the-badge&logo=Tableau&logoColor=E97627"/>
-<img src="https://img.shields.io/badge/GitHub-rebeccapurple?style=for-the-badget&logo=GitHub&logoColor=181717"/>
+<img src="https://img.shields.io/badge/PyCham-forestgreen?style=plastic&logo=PyCham&logoColor=000000"/>
+<img src="https://img.shields.io/badge/Jupyter Notebook-orangered?style=plastic&logo=Jupyter&logoColor=F37626"/>
+<img src="https://img.shields.io/badge/Tableau Public-royalblue?style=plastic&logo=Tableau&logoColor=E97627"/>
+<img src="https://img.shields.io/badge/GitHub-rebeccapurple?style=plastic&logo=GitHub&logoColor=181717"/>
 </p>
 
 
