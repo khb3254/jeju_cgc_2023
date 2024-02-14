@@ -1,4 +1,4 @@
-# 🍊JEJU🥕
+<img width="744" alt="image" src="https://github.com/khb3254/jeju_cgc_2023/assets/141305340/20cfe89b-2f64-43eb-8ff8-6930aacc2266"># 🍊JEJU🥕
 제주도 특산물 가격 예측 Ai
 
 🏆2023년 KIT 해커톤 제 1회 SW 및 Ai융합 공모전 장려상 수상
@@ -16,6 +16,7 @@
 <img src="https://img.shields.io/badge/GitHub-rebeccapurple?style=plastic&logo=GitHub&logoColor=181717"/>
 </p>
 
-
-<img src="도매가 가격 달력 이미지.png" alt = "도매가 가격 달력" width = "500" style = "margin-right: 10px;">
-<img src="특산품 예상 금액 이미지.png" width = "300">
+<div style="display : flex; align-items : center;">
+  <img src="도매가 가격 달력 이미지.png" alt = "도매가 가격 달력" width = "500" style = "margin-right: 10px;">
+  <img src="특산품 예상 금액 이미지.png" width = "300">
+</div>
