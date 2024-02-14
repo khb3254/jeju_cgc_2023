@@ -1,4 +1,4 @@
-<img width="744" alt="image" src="https://github.com/khb3254/jeju_cgc_2023/assets/141305340/20cfe89b-2f64-43eb-8ff8-6930aacc2266"># 🍊JEJU🥕
+# 🍊JEJU🥕
 제주도 특산물 가격 예측 Ai
 
 🏆2023년 KIT 해커톤 제 1회 SW 및 Ai융합 공모전 장려상 수상
