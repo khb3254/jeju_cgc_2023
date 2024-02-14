@@ -18,11 +18,7 @@
   <img src="공모전 수상내역.png" width = "300">
   
   </br>
-  </br>
   <p>⚒️ Tools 🔧</p>
-  </br>
-  </br>
-
   <p>
   <img src="https://img.shields.io/badge/PyCham-forestgreen?style=plastic&logo=PyCham&logoColor=000000"/>
   <img src="https://img.shields.io/badge/Jupyter Notebook-orangered?style=plastic&logo=Jupyter&logoColor=F37626"/>
@@ -34,7 +30,7 @@
   
   <div style="display : flex; align-items : center;">
     <img src="도매가 가격 달력 이미지.png" alt = "도매가 가격 달력" width = "500" style = "margin-right: 40px;">
-    <img src="특산품 예상 금액 이미지.png" width = "300">
+    <img src="특산품 예상 금액 이미지.png" width = "500">
   </div>
 </div>
 
