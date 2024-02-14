@@ -1,6 +1,8 @@
 # 🍊JEJU🥕
-제주도 특산물 가격 예측 AI
+제주도 특산물 가격 예측 Ai
 
+🏆2023년 KIT 해커톤 제 1회 SW 및 Ai융합 공모전 장려상 수상
+<img src="공모전 수상내역.png">
 - 사이트 주소 : https://jeju.pythonanywhere.com/welcome
 
 
@@ -16,3 +18,4 @@
 
 
 <img src="도매가 가격 달력 이미지.png">
+<img src="특산품 예상 금액 이미지.png">
