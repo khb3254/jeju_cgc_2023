@@ -2,21 +2,22 @@
 제주도 특산물 가격 예측 Ai
 
 
-## ✨Period : 2023.10.30 ~ 2023.11.29
+💻사이트 주소 : https://jeju.pythonanywhere.com/welcome
 
 
-## 🌴Developer
+✨Period : 2023.10.30 ~ 2023.11.29
+
+
+🌴Developer
 - 강나영
 - 오영환
 - 안병선
 - 유정민
 
 
-💻사이트 주소 : https://jeju.pythonanywhere.com/welcome
-
-
+## 🏆수상
 <div>
-  <p>🏆2023년 KIT 해커톤 제 1회 SW 및 Ai융합 공모전 장려상 수상</p>
+  <p>2023년 KIT 해커톤 제 1회 SW 및 Ai융합 공모전 장려상 수상</p>
   <img src="공모전 수상내역.png" width = "300">
 </div> 
 </br>
