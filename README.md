@@ -1,5 +1,5 @@
 # 🍊JEJU_청경채🥕
-- 제주도 특산물 가격 예측 Ai
+- 제주도 특산물 가격 예측 AI
 
   
 - 💻 사이트 주소 : https://jeju.pythonanywhere.com/welcome
