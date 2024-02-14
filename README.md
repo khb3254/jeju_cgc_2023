@@ -2,7 +2,7 @@
 제주도 특산물 가격 예측 Ai
 
 🏆2023년 KIT 해커톤 제 1회 SW 및 Ai융합 공모전 장려상 수상
-<img src="공모전 수상내역.png">
+<img src="공모전 수상내역.png" width = "300">
 - 사이트 주소 : https://jeju.pythonanywhere.com/welcome
 
 
